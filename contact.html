@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Metric Magnate — Let's Build Together</title>
+    <meta name="description"
+        content="Get in touch with Metric Magnate — India's premium digital marketing agency. Let's discuss your project and start building something extraordinary.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+        rel="stylesheet">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">METRIC<span>MAGNATE</span></div>
+            <div class="loader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">METRIC<span>MAGNATE</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#work" class="nav-link">Our Work</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Contact Hero -->
+        <section class="contact-hero">
+            <!-- Animated Background Elements -->
+            <div class="hero-bg-elements">
+                <!-- Morphing Blob -->
+                <div class="hero-blob"></div>
+                <!-- Animated Grid -->
+                <div class="hero-grid-overlay"></div>
+                <!-- Glowing Orbs -->
+                <div class="glow-orb orb-1"></div>
+                <div class="glow-orb orb-2"></div>
+                <div class="glow-orb orb-3"></div>
+                <!-- Rotating Ring -->
+                <div class="rotating-ring"></div>
+                <!-- Floating Shapes -->
+                <div class="geo-shape shape-1"></div>
+                <div class="geo-shape shape-2"></div>
+                <div class="geo-shape shape-3"></div>
+                <div class="geo-shape shape-4"></div>
+                <div class="geo-shape shape-5"></div>
+            </div>
+
+            <div class="container">
+                <div class="contact-hero-content">
+                    <span class="sub-title fade-up">Get In Touch</span>
+                    <h1 class="reveal-text">Let's Create <span class="highlight">Something</span> <br>Extraordinary.
+                    </h1>
+                    <p class="contact-hero-desc fade-up">Have a project in mind? We'd love to hear about it. Drop us a
+                        line and let's turn your vision into reality.</p>
+                </div>
+            </div>
+            <!-- Floating Icons -->
+            <div class="hero-floats">
+                <span class="float-icon fi-1">&#x2731;</span>
+                <span class="float-icon fi-2">+</span>
+                <span class="float-icon fi-3">&#x25CF;</span>
+                <span class="float-icon fi-4">&#x2731;</span>
+            </div>
+        </section>
+
+        <!-- Contact Main Section -->
+        <section class="contact-main">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Left: Contact Form -->
+                    <div class="contact-form-wrapper fade-up">
+                        <h2>Send Us a Message</h2>
+                        <p class="form-subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+                                </div>
+                                <div class="form-group">
+                                    <label for="budget">Project Budget</label>
+                                    <select id="budget" name="budget">
+                                        <option value="" disabled selected>Select range</option>
+                                        <option value="25k-50k">₹25K - ₹50K</option>
+                                        <option value="50k-1l">₹50K - ₹1 Lakh</option>
+                                        <option value="1l-3l">₹1L - ₹3 Lakhs</option>
+                                        <option value="3l-5l">₹3L - ₹5 Lakhs</option>
+                                        <option value="5l+">₹5 Lakhs+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="service">Service Interested In</label>
+                                <select id="service" name="service">
+                                    <option value="" disabled selected>Choose a service</option>
+                                    <option value="seo">SEO & Search Marketing</option>
+                                    <option value="performance">Performance Marketing</option>
+                                    <option value="social">Social Media Marketing</option>
+                                    <option value="web">Web Development & Design</option>
+                                    <option value="branding">Brand Identity & Strategy</option>
+                                    <option value="content">Content Marketing</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="message">Project Details</label>
+                                <textarea id="message" name="message" rows="5"
+                                    placeholder="Tell us about your project, goals, and timeline..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                Send Message <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Contact Info -->
+                    <div class="contact-info-wrapper fade-up">
+                        <div class="info-card">
+                            <h3>Contact Information</h3>
+                            <p class="info-lead">We're always ready to help and answer any question you might have.</p>
+
+                            <div class="info-items">
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <span class="info-label">Email Us</span>
+                                        <a href="mailto:info@metricmagnate.com">info@metricmagnate.com</a>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div>
+                                        <span class="info-label">Call Us</span>
+                                        <a href="tel:+919876543210">+91 98765 43210</a>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <span class="info-label">Visit Us</span>
+                                        <p>Delhi NCR, India</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <span class="info-label">Working Hours</span>
+                                        <p>Mon – Fri: 10AM – 7PM IST</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-social">
+                                <span>Follow Us</span>
+                                <div class="social-links">
+                                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full-Width Map Section -->
+        <section class="map-section">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.54004883948!2d77.06889754999999!3d28.527280000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1708000000000!5m2!1sen!2sin"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="faq-split">
+                    <!-- Left: Heading + Decorative -->
+                    <div class="faq-left fade-up">
+                        <span class="sub-title">FAQ</span>
+                        <h2 class="section-heading">Frequently Asked <br><span class="highlight">Questions.</span></h2>
+                        <p class="faq-desc">Can't find what you're looking for? Feel free to <a
+                                href="mailto:info@metricmagnate.com" class="faq-link">email us</a> directly.</p>
+                        <!-- Large decorative FAQ text -->
+                        <div class="faq-deco-text">FAQ</div>
+                        <!-- Decorative question mark -->
+                        <div class="faq-deco-mark">?</div>
+                    </div>
+
+                    <!-- Right: Accordion -->
+                    <div class="faq-right">
+                        <div class="faq-item fade-up">
+                            <button class="faq-question">
+                                <span>How long does a typical project take?</span>
+                                <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Most projects take 2-8 weeks depending on scope. A simple landing page might take 1-2
+                                    weeks, while a full digital strategy could take 6-8 weeks to plan and launch.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-up">
+                            <button class="faq-question">
+                                <span>What's your pricing structure?</span>
+                                <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                            </button>
+                            <div class="faq-answer">
+                                <p>We offer project-based pricing and monthly retainers. Every project starts with a
+                                    discovery call to understand your needs, followed by a detailed proposal with
+                                    transparent pricing.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-up">
+                            <button class="faq-question">
+                                <span>Do you work with startups?</span>
+                                <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Absolutely! We love working with ambitious startups. We have flexible packages
+                                    designed specifically for early-stage businesses looking to establish their digital
+                                    presence.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-up">
+                            <button class="faq-question">
+                                <span>What industries do you specialize in?</span>
+                                <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                            </button>
+                            <div class="faq-answer">
+                                <p>We specialize in E-commerce, Healthcare, Fashion, and Technology sectors. However,
+                                    our
+                                    data-driven approach works across all industries.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-up">
+                            <button class="faq-question">
+                                <span>How do you measure success?</span>
+                                <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                            </button>
+                            <div class="faq-answer">
+                                <p>We set clear KPIs at the start of every project — whether it's ROI, traffic growth,
+                                    lead generation, or brand awareness. You'll receive detailed monthly reports with
+                                    transparent metrics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">Metric <span>Magnate</span></a>
+                    <p class="brand-tagline">Elevating digital metrics for ambitious brands. We blend data science with
+                        surgical precision to dominate search and social landscapes.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#work">Work</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Performance Marketing</a></li>
+                        <li><a href="#">SEO Domination</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Creative Strategy</a></li>
+                        <li><a href="#">Brand Identity</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col">
+                    <h4>Let's Talk</h4>
+                    <div class="contact-info">
+                        <p>India Office: <span>Delhi NCR</span></p>
+                        <p>Email: <a href="mailto:info@metricmagnate.com">info@metricmagnate.com</a></p>
+                    </div>
+                    <a href="contact.html" class="footer-cta-btn">Start a Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2026 Metric Magnate. Crafted with Excellence in India.</p>
+                </div>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+
+</html>
