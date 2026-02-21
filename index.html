@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metric Magnate | Luxury Digital Intelligence</title>
+    <meta name="description"
+        content="Metric Magnate is a premium digital intelligence and marketing agency dedicated to scaling brands with data-driven strategies and stunning design.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+        rel="stylesheet">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">METRIC<span>MAGNATE</span></div>
+            <div class="loader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">METRIC<span>MAGNATE</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#work" class="nav-link">Our Work</a></li>
+                <li><a href="#contact" class="nav-link btn-primary">Let's Talk</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-new-layout">
+                    <div class="top-row">
+                        <h1 class="reveal-text">DEFINE<span class="dot pink"></span> DESIGN<span
+                                class="dot yellow"></span></h1>
+                    </div>
+
+                    <div class="middle-row">
+                        <div class="hero-desc fade-up">
+                            <p>Metric Magnate® is the best digital marketing agency in India that excels in launching,
+                                growing, and reinventing brands and startups.</p>
+                        </div>
+                        <h1 class="reveal-text">BUILD<span class="dot teal"></span></h1>
+                    </div>
+
+                    <div class="bottom-row">
+                        <h1 class="reveal-text">MARKET<span class="dot orange"></span></h1>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <div class="mouse"></div>
+            </div> -->
+        </section>
+
+        <!-- Redesigned About Us Section (Media on Left, Title/Content on Right) -->
+        <section id="about" class="about-story">
+            <div class="container">
+                <div class="story-grid">
+                    <!-- Left: Media Section -->
+                    <div class="story-left">
+                        <div class="tag-with-line fade-up">
+                            <span class="sub-title">(THINK BIG WITH US.)</span>
+                            <div class="accent-line"></div>
+                        </div>
+                        <div class="story-main-media reveal-img">
+                            <video autoplay muted loop playsinline class="about-story-video">
+                                <source src="https://www.doorsstudio.com/assets/front/videos/brand-big-idea2.mp4"
+                                    type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="secondary-gallery">
+                            <div class="small-img-card reveal-card">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                    alt="Strategy Analytics">
+                                <div class="img-tags">
+                                    <span>Metric</span>
+                                </div>
+                            </div>
+                            <div class="small-img-card reveal-card">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                    alt="Relentless Performance">
+                                <div class="img-tags">
+                                    <span>Science</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content Section -->
+                    <div class="story-right">
+                        <div class="story-header fade-up">
+                            <h2 class="main-heading">Marketing Built on a <span class="highlight">Solid
+                                    Foundation.</span></h2>
+                        </div>
+
+                        <div class="story-description fade-up">
+                            <p>Metric Magnate was born to fix a broken industry. We saw too much "fluff" and not enough
+                                "metric." We treat your marketing like a science—precise, measurable, and relentless.
+                            </p>
+                            <p>Whether it’s an oncology wing or a gourmet cafe, we find the core of your brand and
+                                amplify it.</p>
+                        </div>
+
+                        <div class="story-stats grid-stats">
+                            <div class="stat-item">
+                                <span class="stat-num" data-val="50">0</span><span class="plus">+</span>
+                                <small>Brands Transformed</small>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num" data-val="5">0</span><span class="plus">X</span>
+                                <small>Average ROAS</small>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num" data-val="98">0</span><span class="plus">%</span>
+                                <small>Client Retention</small>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num" data-val="10">0</span><span class="plus">+</span>
+                                <small>Specialist Verticals</small>
+                            </div>
+                        </div>
+
+                        <div class="story-cta fade-up">
+                            <div class="team-avatars">
+                                <img src="https://i.pravatar.cc/100?u=1" alt="Team Member">
+                                <img src="https://i.pravatar.cc/100?u=8" alt="Team Member">
+                                <img src="https://i.pravatar.cc/100?u=5" alt="Team Member">
+                            </div>
+                            <a href="#contact" class="watch-intro">
+                                <div class="play-btn"><i class="fas fa-arrow-right"></i></div>
+                                <span>LET'S START YOUR STORY</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stacked Services Section -->
+        <section id="services" class="services-stack-section">
+            <div class="container" style="padding-top: 30px; padding-bottom: 20px;">
+                <span class="sub-title">Capabilities</span>
+            </div>
+            <div class="stack-container">
+                <div class="stack-cards">
+                    <!-- Card 1 -->
+                    <div class="service-stack-card card-1">
+                        <div class="stack-card-inner">
+                            <div class="stack-content">
+                                <span class="card-num">01</span>
+                                <h2 class="card-title">Content Strategy & <span class="highlight">Scripts</span></h2>
+                                <p class="card-desc">High-retention video scripts and podcast production that turn
+                                    viewers into loyalists. We script for engagement and produce for impact.</p>
+                                <a href="#contact" class="stack-cta-btn">Elevate Your Content <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="stack-img">
+                                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+                                    alt="Content Strategy">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="service-stack-card card-2">
+                        <div class="stack-card-inner">
+                            <div class="stack-content">
+                                <span class="card-num">02</span>
+                                <h2 class="card-title">Institutional <span class="highlight">SEO</span></h2>
+                                <p class="card-desc">Building long-term organic authority to ensure you own the search
+                                    results in your niche. Market dominance starts with searchability.</p>
+                                <a href="#contact" class="stack-cta-btn">Dominate Search <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="stack-img">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+                                    alt="Institutional SEO">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="service-stack-card card-3">
+                        <div class="stack-card-inner">
+                            <div class="stack-content">
+                                <span class="card-num">03</span>
+                                <h2 class="card-title">Brand Identity & <span class="highlight">UI/UX</span></h2>
+                                <p class="card-desc">Crafting digital interfaces that look premium and function with
+                                    surgical precision. Design that converts while inspiring trust.</p>
+                                <a href="#contact" class="stack-cta-btn">Define Your Visuals <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="stack-img">
+                                <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+                                    alt="Brand Identity">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted By Section (Double Slider) -->
+        <section class="trusted-by">
+            <div class="container text-center">
+                <span class="sub-title">Industry Validation</span>
+                <h2 class="trusted-heading">Trusted By <span class="highlight">Giants</span></h2>
+            </div>
+
+            <div class="marquee-container">
+                <!-- Row 1: Right to Left -->
+                <div class="marquee-track track-rtl">
+                    <div class="marquee-content">
+                        <div class="brand-item"><img src="https://logo.clearbit.com/google.com" alt="Google"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/hubspot.com" alt="HubSpot"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/shopify.com" alt="Shopify"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/meta.com" alt="Meta"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/semrush.com" alt="Semrush"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/mailchimp.com" alt="Mailchimp">
+                        </div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/salesforce.com" alt="Salesforce">
+                        </div>
+                    </div>
+                    <div class="marquee-content" aria-hidden="true">
+                        <div class="brand-item"><img src="https://logo.clearbit.com/google.com" alt="Google"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/hubspot.com" alt="HubSpot"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/shopify.com" alt="Shopify"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/meta.com" alt="Meta"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/semrush.com" alt="Semrush"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/mailchimp.com" alt="Mailchimp">
+                        </div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/salesforce.com" alt="Salesforce">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2: Left to Right -->
+                <div class="marquee-track track-ltr">
+                    <div class="marquee-content">
+                        <div class="brand-item"><img src="https://logo.clearbit.com/stripe.com" alt="Stripe"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/slack.com" alt="Slack"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/notion.so" alt="Notion"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/figma.com" alt="Figma"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/adobe.com" alt="Adobe"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/zoom.us" alt="Zoom"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/asana.com" alt="Asana"></div>
+                    </div>
+                    <div class="marquee-content" aria-hidden="true">
+                        <div class="brand-item"><img src="https://logo.clearbit.com/stripe.com" alt="Stripe"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/slack.com" alt="Slack"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/notion.so" alt="Notion"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/figma.com" alt="Figma"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/adobe.com" alt="Adobe"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/zoom.us" alt="Zoom"></div>
+                        <div class="brand-item"><img src="https://logo.clearbit.com/asana.com" alt="Asana"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Us Section (Scattered Card Layout) -->
+        <section class="why-choose-us">
+            <div class="why-orb-left"></div>
+            <div class="container relative">
+                <div class="why-header text-center">
+                    <span class="sub-title">The Metric Advantage</span>
+                    <h2 class="why-heading">Why Leaders Choose <span class="highlight">Metric Magnate</span></h2>
+                </div>
+
+                <div class="why-scatter-grid">
+                    <!-- Dashed Connection Lines -->
+                    <div class="dashed-svg-container">
+                        <svg width="100%" height="100%" viewBox="0 0 1000 600" fill="none" preserveAspectRatio="none">
+                            <path
+                                d="M150,150 Q500,50 850,150 M150,150 Q500,300 150,550 M850,150 Q500,300 850,550 M150,550 Q500,650 850,550"
+                                stroke="#e0e0e0" stroke-width="2" stroke-dasharray="8,8" />
+                        </svg>
+                    </div>
+                    <!-- Card 1: Expertise -->
+                    <div class="why-card-wrapper">
+                        <div class="why-card-scatter card-yellow scatter-1">
+                            <div class="card-dots"><span></span><span></span></div>
+                            <div class="card-inner">
+                                <div class="card-icon"><i class="fas fa-th-large"></i></div>
+                                <h3>Expertise</h3>
+                                <p>We leverage over 15 years of experience to deliver high-quality, tailored solutions
+                                    for
+                                    every client.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Custom Solutions -->
+                    <div class="why-card-wrapper">
+                        <div class="why-card-scatter card-purple scatter-2">
+                            <div class="card-dots"><span></span><span></span></div>
+                            <div class="card-inner">
+                                <div class="card-icon"><i class="fas fa-bolt"></i></div>
+                                <h3>Custom Solutions</h3>
+                                <p>Each solution is personalized, ensuring that your business gets the exact tools it
+                                    needs
+                                    to succeed.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Customer-Focused -->
+                    <div class="why-card-wrapper">
+                        <div class="why-card-scatter card-pink scatter-3">
+                            <div class="card-dots"><span></span><span></span></div>
+                            <div class="card-inner">
+                                <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
+                                <h3>Customer-Focused</h3>
+                                <p>We prioritize your satisfaction and aim to exceed your expectations in every project
+                                    we
+                                    take on.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Strategic Growth -->
+                    <div class="why-card-wrapper">
+                        <div class="why-card-scatter card-blue scatter-4">
+                            <div class="card-dots"><span></span><span></span></div>
+                            <div class="card-inner">
+                                <div class="card-icon"><i class="fas fa-users"></i></div>
+                                <h3>Strategic Growth</h3>
+                                <p>Our methodologies are built to scale. We don't just solve today's problems; we build
+                                    for
+                                    tomorrow's reach.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- Work Section -->
+        <section id="work" class="work">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="sub-title">Portfolio</span>
+                    <h2 class="reveal-text">Selected <span class="highlight">Ventures.</span></h2>
+                </div>
+            </div>
+            <div class="work-slider-wrapper">
+                <button class="work-nav prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="work-nav next"><i class="fas fa-chevron-right"></i></button>
+                <div class="work-slider">
+                    <div class="work-track">
+                        <div class="work-item">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Fintech Revolution">
+                        </div>
+                        <div class="work-item">
+                            <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Data Analytics Pro">
+                        </div>
+                        <div class="work-item">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="E-comm Scale">
+                        </div>
+                        <div class="work-item">
+                            <img src="https://images.unsplash.com/photo-1576091160550-217359f42f8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="AI Health Track">
+                        </div>
+                        <div class="work-item">
+                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Fashion Forward">
+                        </div>
+                        <div class="work-item">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Corporate Rebrand">
+                        </div>
+                        <div class="work-item">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Team Synergy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Testimonials Section (Words of thanks) -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="grid-bg"></div>
+            <div class="container relative">
+                <div class="testimonial-header text-center">
+                    <div class="testi-badge">TESTIMONIALS</div>
+                    <h2 class="testi-heading">Words of <span class="highlight">Thanks</span></h2>
+                    <!-- <p class="testi-subtext">Don’t just take our word for it. Explore the experiences of our valued
+                        partners and their journey with Metric Magnate.</p> -->
+                </div>
+
+                <!-- Floating Avatar Container -->
+                <div class="floating-avatar-area">
+                    <div class="avatar-item av-pos-1 active" data-name="Priya Mehta"
+                        data-quote="Investing in Metric Magnate was the best decision for my brand’s future. The transparency in strategy and execution exceeded my expectations."
+                        data-img="https://i.pravatar.cc/100?u=12">
+                        <img src="https://i.pravatar.cc/100?u=12" alt="Client">
+                    </div>
+                    <div class="avatar-item av-pos-2" data-name="Rahul Sharma"
+                        data-quote="Their clinical approach to SEO turned our organic traffic around in months. We finally own our niche search results."
+                        data-img="https://i.pravatar.cc/100?u=22">
+                        <img src="https://i.pravatar.cc/100?u=22" alt="Client">
+                    </div>
+                    <div class="avatar-item av-pos-3" data-name="Arjun Varma"
+                        data-quote="Digital transformation isn't just a buzzword here. They built our entire UI/UX with surgical precision and care."
+                        data-img="https://i.pravatar.cc/100?u=33">
+                        <img src="https://i.pravatar.cc/100?u=33" alt="Client">
+                    </div>
+                    <div class="avatar-item av-pos-4" data-name="Sneha Rao"
+                        data-quote="The content strategy scripts they produced for our podcast were game-changers. Triple the engagement in weeks."
+                        data-img="https://i.pravatar.cc/100?u=44">
+                        <img src="https://i.pravatar.cc/100?u=44" alt="Client">
+                    </div>
+                    <div class="avatar-item av-pos-5" data-name="Vikram Singh"
+                        data-quote="Responsive, metric-driven, and relentless. Metric Magnate treats our budget like it's their own."
+                        data-img="https://i.pravatar.cc/100?u=55">
+                        <img src="https://i.pravatar.cc/100?u=55" alt="Client">
+                    </div>
+                    <div class="avatar-item av-pos-6" data-name="Ananya Iyer"
+                        data-quote="Crafting a premium brand identity is hard, but they made it look easy. Our new visual language is stunning."
+                        data-img="https://i.pravatar.cc/100?u=66">
+                        <img src="https://i.pravatar.cc/100?u=66" alt="Client">
+                    </div>
+                    <div class="avatar-item av-pos-7" data-name="Kabir Das"
+                        data-quote="Metric Magnate transformed our local presence. Their local SEO strategies are unmatched in the region."
+                        data-img="https://i.pravatar.cc/100?u=77">
+                        <img src="https://i.pravatar.cc/100?u=77" alt="Client">
+                    </div>
+                    <!-- <div class="avatar-item av-pos-8" data-name="Meera Reddy"
+                        data-quote="The data visualization they provided for our annual report was breathtaking. Pure digital art with a purpose."
+                        data-img="https://i.pravatar.cc/100?u=88">
+                        <img src="https://i.pravatar.cc/100?u=88" alt="Client">
+                    </div> -->
+                </div>
+
+                <!-- Testimonial Display Card -->
+                <div class="testi-display-wrapper">
+                    <!-- Navigation Arrows -->
+                    <button class="testi-nav prev" id="testi-prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="testi-nav next" id="testi-next-btn"><i class="fas fa-chevron-right"></i></button>
+
+                    <div class="testi-card-container">
+                        <div class="testi-card">
+                            <div class="testi-card-avatar">
+                                <img src="https://i.pravatar.cc/100?u=12" id="display-avatar" alt="Client">
+                            </div>
+                            <h3 class="client-name" id="display-name">Priya Mehta</h3>
+                            <p class="client-quote" id="display-quote">"Investing in Metric Magnate was the best
+                                decision for my brand’s future. The transparency in strategy and execution exceeded my
+                                expectations."</p>
+
+                            <!-- Google Review Button -->
+                            <!-- <div class="testi-google-btn">
+                                <a href="#" class="gbp-link">
+                                    <img src="https://www.gstatic.com/images/branding/product/2x/google_24dp.png"
+                                        alt="Google" class="google-icon">
+                                    <span>Check More on GBP</span>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">Metric <span>Magnate</span></a>
+                    <p class="brand-tagline">Elevating digital metrics for ambitious brands. We blend data science with
+                        surgical precision to dominate search and social landscapes.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Performance Marketing</a></li>
+                        <li><a href="#">SEO Domination</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Creative Strategy</a></li>
+                        <li><a href="#">Brand Identity</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col">
+                    <h4>Let's Talk</h4>
+                    <div class="contact-info">
+                        <p>India Office: <span>Delhi NCR</span></p>
+                        <p>Email: <a href="mailto:info@metricmagnate.com">info@metricmagnate.com</a></p>
+                    </div>
+                    <a href="#contact" class="footer-cta-btn">Start a Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2026 Metric Magnate. Crafted with Excellence in India.</p>
+                </div>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
