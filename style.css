@@ -189,6 +189,72 @@ h3,
     color: var(--accent-color);
 }
 
+/* Dropdown */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dd-arrow {
+    font-size: 10px;
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+}
+
+.nav-dropdown:hover .nav-dd-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    min-width: 240px;
+    background: #fff;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    padding: 10px 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+    z-index: 100;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-menu li a:hover {
+    color: #000;
+    background: rgba(38, 211, 103, 0.08);
+    border-left-color: #26d367;
+}
+
+.dropdown-menu li a i {
+    font-size: 14px;
+    color: #26d367;
+    width: 18px;
+    text-align: center;
+}
+
 .menu-toggle {
     display: none;
     cursor: pointer;
@@ -2004,6 +2070,35 @@ h2 {
 
     .menu-toggle {
         display: flex;
+    }
+
+    .nav-dropdown {
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        min-width: unset;
+        background: rgba(255, 255, 255, 0.05);
+        border: none;
+        border-radius: 10px;
+        padding: 8px 0;
+        margin-top: 12px;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        display: none;
+    }
+
+    .nav-dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu li a {
+        justify-content: center;
+        padding: 10px 16px;
+        font-size: 13px;
     }
 
     h1 {

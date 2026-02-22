@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Strategy & Scripts | Metric Magnate</title>
+    <meta name="description"
+        content="Professional content strategy and scriptwriting services by Metric Magnate. We craft compelling narratives that engage audiences and drive conversions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="services.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">METRIC<span>MAGNATE</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-dropdown">
+                    <a href="index.html#services" class="nav-link">Services <i
+                            class="fas fa-chevron-down nav-dd-arrow"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="content-strategy.html"><i class="fas fa-pen-nib"></i> Content Strategy &
+                                Scripts</a></li>
+                        <li><a href="seo.html"><i class="fas fa-chart-line"></i> Institutional SEO</a></li>
+                        <li><a href="brand-identity.html"><i class="fas fa-palette"></i> Brand Identity & UI/UX</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="index.html#work" class="nav-link">Our Work</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="svc-hero">
+            <div class="container">
+                <span class="svc-hero-badge fade-up"><i class="fas fa-pen-nib"></i> Content Services</span>
+                <h1 class="fade-up">Content Strategy<br>& <span class="highlight">Scripts</span></h1>
+                <p class="svc-hero-desc">We craft data-backed content strategies and compelling scripts that captivate
+                    your audience, boost engagement, and drive real business growth.</p>
+                <div class="svc-hero-btns fade-up">
+                    <a href="contact.html" class="btn btn-primary">Get Started <i class="fas fa-arrow-right"></i></a>
+                    <a href="#portfolio" class="btn btn-outline-light">View Our Work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About + Video -->
+        <section class="svc-about">
+            <div class="container">
+                <div class="svc-about-split">
+                    <div class="svc-about-text">
+                        <span class="sub-title fade-up">What We Do</span>
+                        <h2 class="fade-up">Stories That <span class="highlight">Sell</span></h2>
+                        <p class="fade-up">From social media scripts to full-funnel content strategies, we blend
+                            creativity with data. Every word is crafted to convert browsers into buyers and followers
+                            into loyal fans.</p>
+                        <p class="fade-up">Our team of writers, strategists, and analysts work together to create
+                            content ecosystems that deliver consistent growth across every channel.</p>
+                        <div class="svc-about-features fade-up">
+                            <span class="svc-feature-tag"><i class="fas fa-check"></i> Social Media Scripts</span>
+                            <span class="svc-feature-tag"><i class="fas fa-check"></i> Blog & Article Writing</span>
+                            <span class="svc-feature-tag"><i class="fas fa-check"></i> Video Scripts</span>
+                            <span class="svc-feature-tag"><i class="fas fa-check"></i> Ad Copywriting</span>
+                            <span class="svc-feature-tag"><i class="fas fa-check"></i> Email Campaigns</span>
+                        </div>
+                    </div>
+                    <div class="svc-about-video fade-up">
+                        <video autoplay muted loop playsinline>
+                            <source src="https://cdn.pixabay.com/video/2020/05/25/40130-424930032_large.mp4"
+                                type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section class="svc-portfolio" id="portfolio">
+            <div class="container">
+                <div class="svc-portfolio-header">
+                    <span class="sub-title fade-up">Our Work</span>
+                    <h2 class="fade-up">Content That <span class="highlight">Converts</span></h2>
+                </div>
+                <div class="svc-portfolio-slider">
+                    <div class="svc-portfolio-track">
+                        <div class="svc-portfolio-item">
+                            <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?w=600&q=80"
+                                alt="Campaign Strategy">
+                            <div class="svc-portfolio-overlay">
+                                <h4>E-commerce Campaign</h4>
+                                <span>300% ROI Increase</span>
+                            </div>
+                        </div>
+                        <div class="svc-portfolio-item">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"
+                                alt="Data Content">
+                            <div class="svc-portfolio-overlay">
+                                <h4>Healthcare Blog Series</h4>
+                                <span>50K Monthly Readers</span>
+                            </div>
+                        </div>
+                        <div class="svc-portfolio-item">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80"
+                                alt="Analytics">
+                            <div class="svc-portfolio-overlay">
+                                <h4>Fashion Social Campaign</h4>
+                                <span>2M+ Impressions</span>
+                            </div>
+                        </div>
+                        <div class="svc-portfolio-item">
+                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=80"
+                                alt="Brand Content">
+                            <div class="svc-portfolio-overlay">
+                                <h4>Real Estate Scripts</h4>
+                                <span>120+ Leads/Month</span>
+                            </div>
+                        </div>
+                        <div class="svc-portfolio-item">
+                            <img src="https://images.unsplash.com/photo-1576091160550-217359f42f8c?w=600&q=80"
+                                alt="Video Scripts">
+                            <div class="svc-portfolio-overlay">
+                                <h4>YouTube Content Series</h4>
+                                <span>500K+ Views</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="svc-slider-nav">
+                    <button class="svc-slider-btn svc-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="svc-slider-btn svc-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="svc-overview">
+            <div class="container">
+                <div class="svc-overview-header">
+                    <span class="sub-title fade-up">What We Offer</span>
+                    <h2 class="fade-up">Our Content <span class="highlight">Services</span></h2>
+                </div>
+                <div class="svc-overview-grid">
+                    <div class="svc-overview-card fade-up">
+                        <div class="svc-card-num">01</div>
+                        <h3>Social Media Scripts</h3>
+                        <p>Scroll-stopping scripts for Instagram Reels, YouTube Shorts, and TikTok that boost engagement
+                            and follower growth.</p>
+                    </div>
+                    <div class="svc-overview-card fade-up">
+                        <div class="svc-card-num">02</div>
+                        <h3>Blog & SEO Content</h3>
+                        <p>Long-form articles and blog posts optimized for search engines, driving organic traffic and
+                            establishing authority.</p>
+                    </div>
+                    <div class="svc-overview-card fade-up">
+                        <div class="svc-card-num">03</div>
+                        <h3>Video Scriptwriting</h3>
+                        <p>Professional scripts for brand videos, explainers, ads, and documentary-style content that
+                            tells your story.</p>
+                    </div>
+                    <div class="svc-overview-card fade-up">
+                        <div class="svc-card-num">04</div>
+                        <h3>Ad Copywriting</h3>
+                        <p>High-converting copy for Google Ads, Meta Ads, and LinkedIn campaigns that maximize your ad
+                            spend ROI.</p>
+                    </div>
+                    <div class="svc-overview-card fade-up">
+                        <div class="svc-card-num">05</div>
+                        <h3>Email Marketing</h3>
+                        <p>Automated email sequences, newsletters, and drip campaigns that nurture leads and drive
+                            repeat purchases.</p>
+                    </div>
+                    <div class="svc-overview-card fade-up">
+                        <div class="svc-card-num">06</div>
+                        <h3>Content Strategy</h3>
+                        <p>Full-funnel content roadmaps with editorial calendars, audience research, and competitor
+                            analysis for sustained growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="svc-faq">
+            <div class="container">
+                <div class="svc-faq-header">
+                    <span class="sub-title fade-up">FAQ</span>
+                    <h2 class="fade-up">Frequently <span class="highlight">Asked Questions</span></h2>
+                    <p class="fade-up">Everything you need to know about our content strategy services.</p>
+                </div>
+                <div class="svc-faq-grid">
+                    <div class="svc-faq-card">
+                        <div class="svc-faq-num">01 <i class="fas fa-fire"></i></div>
+                        <h4>How do you develop a content strategy?</h4>
+                        <p>We start with audience research, competitor analysis, and brand voice mapping. Then we build
+                            a
+                            custom editorial calendar aligned with your business goals.</p>
+                    </div>
+                    <div class="svc-faq-card">
+                        <div class="svc-faq-num">02 <i class="fas fa-fire"></i></div>
+                        <h4>What types of scripts do you write?</h4>
+                        <p>We write scripts for YouTube, Instagram Reels, TikTok, brand films, explainer videos, podcast
+                            outlines, and ad creatives.</p>
+                    </div>
+                    <div class="svc-faq-card">
+                        <div class="svc-faq-num">03 <i class="fas fa-fire"></i></div>
+                        <h4>How long does it take to see results?</h4>
+                        <p>Content strategies typically show measurable results within 4-8 weeks, with compounding
+                            growth over 3-6 months of consistent execution.</p>
+                    </div>
+                    <div class="svc-faq-card">
+                        <div class="svc-faq-num">04 <i class="fas fa-fire"></i></div>
+                        <h4>Do you handle content distribution?</h4>
+                        <p>Yes! We can manage end-to-end content — from ideation and writing to publishing, scheduling,
+                            and performance tracking across all platforms.</p>
+                    </div>
+                    <div class="svc-faq-card">
+                        <div class="svc-faq-num">05 <i class="fas fa-fire"></i></div>
+                        <h4>What industries do you specialize in?</h4>
+                        <p>We work across E-commerce, Healthcare, Fashion, Real Estate, FMCG, and B2B technology
+                            brands with proven frameworks.</p>
+                    </div>
+                    <div class="svc-faq-card">
+                        <div class="svc-faq-num">06 <i class="fas fa-fire"></i></div>
+                        <h4>How many revisions are included?</h4>
+                        <p>We include 3 rounds of comprehensive revisions to ensure the final content meets your exact
+                            expectations and brand voice.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="svc-testimonials">
+            <div class="container">
+                <div class="svc-testimonials-header">
+                    <span class="sub-title fade-up">Testimonials</span>
+                    <h2 class="fade-up">What Our <span class="highlight">Clients Say</span></h2>
+                </div>
+                <div class="svc-testimonials-grid">
+                    <div class="svc-testi-card">
+                        <div class="svc-testi-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <blockquote>"Their content strategy transformed our social media presence. We went from 5K to
+                            50K followers in just 4 months."</blockquote>
+                        <div class="svc-testi-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client"
+                                class="svc-testi-avatar">
+                            <div class="svc-testi-author-info">
+                                <h5>Priya Sharma</h5>
+                                <span>Fashion E-commerce</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="svc-testi-card">
+                        <div class="svc-testi-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <blockquote>"The video scripts they wrote for our YouTube channel helped us cross 100K
+                            subscribers.
+                            Truly exceptional work."</blockquote>
+                        <div class="svc-testi-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client"
+                                class="svc-testi-avatar">
+                            <div class="svc-testi-author-info">
+                                <h5>Rajesh Mehta</h5>
+                                <span>Healthcare Brand</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="svc-testi-card">
+                        <div class="svc-testi-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <blockquote>"Their blog content strategy brought our organic traffic from 2K to 30K monthly
+                            visitors. ROI is through the roof."</blockquote>
+                        <div class="svc-testi-author">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client"
+                                class="svc-testi-avatar">
+                            <div class="svc-testi-author-info">
+                                <h5>Anita Desai</h5>
+                                <span>Real Estate Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="svc-cta">
+            <div class="cta-glow cta-glow-1"></div>
+            <div class="cta-glow cta-glow-2"></div>
+            <div class="container text-center">
+                <span class="cta-badge fade-up"><i class="fas fa-rocket"></i> Let's Create</span>
+                <h2 class="fade-up">Ready to <span class="highlight">Transform</span><br>Your Content?</h2>
+                <p class="fade-up">Let's build a content engine that drives real business growth.</p>
+                <div class="cta-buttons fade-up">
+                    <a href="contact.html" class="btn btn-primary">Start a Project <i
+                            class="fas fa-arrow-right"></i></a>
+                    <a href="index.html#services" class="btn btn-outline-light">Explore Services</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">Metric <span>Magnate</span></a>
+                    <p class="brand-tagline">Elevating digital metrics for ambitious brands. We blend data science with
+                        surgical precision to dominate search and social landscapes.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#work">Work</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="content-strategy.html">Content Strategy</a></li>
+                        <li><a href="seo.html">Institutional SEO</a></li>
+                        <li><a href="brand-identity.html">Brand Identity</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col">
+                    <h4>Let's Talk</h4>
+                    <div class="contact-info">
+                        <p>India Office: <span>Delhi NCR</span></p>
+                        <p>Email: <a href="mailto:info@metricmagnate.com">info@metricmagnate.com</a></p>
+                    </div>
+                    <a href="contact.html" class="footer-cta-btn">Start a Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2026 Metric Magnate. Crafted with Excellence in India.</p>
+                </div>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="services.js"></script>
+</body>
+
+</html>

@@ -253,6 +253,17 @@ const mobileMenu = id => {
         navLinks.classList.toggle('active');
         menu.classList.toggle('is-active');
     });
+
+    // Mobile dropdown toggle
+    const dropdowns = document.querySelectorAll('.nav-dropdown');
+    dropdowns.forEach(dd => {
+        dd.querySelector('.nav-link').addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                dd.classList.toggle('active');
+            }
+        });
+    });
 }
 mobileMenu();
 

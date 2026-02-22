@@ -44,7 +44,17 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li class="nav-dropdown">
+                    <a href="index.html#services" class="nav-link">Services <i
+                            class="fas fa-chevron-down nav-dd-arrow"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="content-strategy.html"><i class="fas fa-pen-nib"></i> Content Strategy &
+                                Scripts</a>
+                        </li>
+                        <li><a href="seo.html"><i class="fas fa-chart-line"></i> Institutional SEO</a></li>
+                        <li><a href="brand-identity.html"><i class="fas fa-palette"></i> Brand Identity & UI/UX</a></li>
+                    </ul>
+                </li>
                 <li><a href="index.html#work" class="nav-link">Our Work</a></li>
                 <li><a href="contact.html" class="nav-link">Contact Us</a></li>
             </ul>
@@ -79,8 +89,26 @@
             </div>
         </section>
 
+        <!-- Know About Us — Video Section -->
+        <section class="about-video-section">
+            <div class="container text-center">
+                <span class="sub-title fade-up">Who We Are</span>
+                <h2 class="section-heading fade-up">Know <span class="highlight">About Us</span></h2>
+            </div>
+            <div class="about-video-wrapper">
+                <div class="about-video-container fade-up" id="aboutVideoZoom">
+                    <video autoplay muted loop playsinline>
+                        <source
+                            src="https://eloqwntmain.ams3.cdn.digitaloceanspaces.com/Services/webdesignservices_axf0M0b2.mp4"
+                            type="video/mp4">
+                    </video>
+
+                </div>
+            </div>
+        </section>
+
         <!-- Our Story Section -->
-        <section class="about-story-section">
+        <!-- <section class="about-story-section">
             <div class="container">
                 <div class="story-split">
                     <div class="story-left-col">
@@ -100,36 +128,112 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Mission, Vision, Values -->
         <section class="mvv-section">
             <div class="container">
-                <div class="mvv-header text-center">
-                    <span class="sub-title fade-up">What Drives Us</span>
-                    <h2 class="section-heading fade-up">Mission. Vision. <span class="highlight">Values.</span></h2>
+                <div class="mvv-split">
+                    <!-- Left — Sticky Text -->
+                    <div class="mvv-left">
+                        <span class="sub-title fade-up">What Drives Us</span>
+                        <h2 class="section-heading fade-up">Mission. Vision.<br><span class="highlight">Values.</span>
+                        </h2>
+                        <p class="mvv-left-desc fade-up">We don't just set goals — we engineer outcomes. Every strategy,
+                            every pixel, every metric is driven by three unshakeable pillars that define who we are.</p>
+                    </div>
+                    <!-- Right — Scroll Cards -->
+                    <div class="mvv-right">
+                        <div class="mvv-card fade-up">
+                            <div class="mvv-card-top">
+                                <div class="mvv-icon"><i class="fas fa-bullseye"></i></div>
+                                <h3>Our Mission</h3>
+                            </div>
+                            <p>To empower ambitious brands with data-driven digital strategies that deliver measurable
+                                growth, maximum ROI, and lasting competitive advantage in the Indian and global
+                                marketplace.</p>
+                        </div>
+                        <div class="mvv-card fade-up">
+                            <div class="mvv-card-top">
+                                <div class="mvv-icon"><i class="fas fa-eye"></i></div>
+                                <h3>Our Vision</h3>
+                            </div>
+                            <p>To be India's most trusted digital growth partner — the agency that brands turn to when
+                                they're ready to stop playing small and start dominating their category with precision
+                                and
+                                creativity.</p>
+                        </div>
+                        <div class="mvv-card fade-up">
+                            <div class="mvv-card-top">
+                                <div class="mvv-icon"><i class="fas fa-gem"></i></div>
+                                <h3>Our Values</h3>
+                            </div>
+                            <p>Transparency in every metric. Excellence in every pixel. Innovation in every strategy. We
+                                believe in honest partnerships, relentless improvement, and results that speak louder
+                                than
+                                words.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="mvv-grid">
-                    <div class="mvv-card fade-up">
-                        <div class="mvv-icon"><i class="fas fa-bullseye"></i></div>
-                        <h3>Our Mission</h3>
-                        <p>To empower ambitious brands with data-driven digital strategies that deliver measurable
-                            growth, maximum ROI, and lasting competitive advantage in the Indian and global marketplace.
-                        </p>
+            </div>
+        </section>
+
+        <!-- Our Services -->
+        <section class="about-services-section">
+            <div class="container">
+                <div class="about-services-header text-center">
+                    <span class="sub-title fade-up">What We Do</span>
+                    <h2 class="section-heading fade-up">Specialized Marketing for<br><span
+                            class="highlight">High-Growth</span> Industries</h2>
+                </div>
+                <div class="about-svc-grid">
+                    <!-- Card 1: Content Strategy -->
+                    <div class="about-svc-card fade-up">
+                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="Content Strategy & Scripts" class="about-svc-bg">
+                        <div class="about-svc-overlay">
+                            <div class="about-svc-overlay-content">
+                                <span class="about-svc-num">01</span>
+                                <h3 class="about-svc-title">Content Strategy &<br>Scripts</h3>
+                                <div class="about-svc-divider"></div>
+                                <p class="about-svc-desc">High-retention video scripts and podcast production that turn
+                                    viewers into loyalists. We script for engagement and produce for impact.</p>
+                                <a href="contact.html" class="about-svc-link">Learn More <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mvv-card fade-up">
-                        <div class="mvv-icon"><i class="fas fa-eye"></i></div>
-                        <h3>Our Vision</h3>
-                        <p>To be India's most trusted digital growth partner — the agency that brands turn to when
-                            they're ready to stop playing small and start dominating their category with precision and
-                            creativity.</p>
+                    <!-- Card 2: Institutional SEO -->
+                    <div class="about-svc-card fade-up">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="Institutional SEO" class="about-svc-bg">
+                        <div class="about-svc-overlay">
+                            <div class="about-svc-overlay-content">
+                                <span class="about-svc-num">02</span>
+                                <h3 class="about-svc-title">Institutional<br>SEO</h3>
+                                <div class="about-svc-divider"></div>
+                                <p class="about-svc-desc">Building long-term organic authority to ensure you own the
+                                    search results in your niche. Market dominance starts with searchability.</p>
+                                <a href="contact.html" class="about-svc-link">Learn More <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mvv-card fade-up">
-                        <div class="mvv-icon"><i class="fas fa-gem"></i></div>
-                        <h3>Our Values</h3>
-                        <p>Transparency in every metric. Excellence in every pixel. Innovation in every strategy. We
-                            believe in honest partnerships, relentless improvement, and results that speak louder than
-                            words.</p>
+                    <!-- Card 3: Brand Identity & UI/UX -->
+                    <div class="about-svc-card fade-up">
+                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="Brand Identity & UI/UX" class="about-svc-bg">
+                        <div class="about-svc-overlay">
+                            <div class="about-svc-overlay-content">
+                                <span class="about-svc-num">03</span>
+                                <h3 class="about-svc-title">Brand Identity &<br>UI/UX</h3>
+                                <div class="about-svc-divider"></div>
+                                <p class="about-svc-desc">Crafting digital interfaces that look premium and function
+                                    with surgical precision. Design that converts while inspiring trust.</p>
+                                <a href="contact.html" class="about-svc-link">Learn More <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -174,6 +278,10 @@
                     <div class="timeline-line"></div>
                     <div class="timeline-item fade-up">
                         <div class="timeline-dot"></div>
+                        <div class="timeline-img">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                                alt="The Beginning">
+                        </div>
                         <div class="timeline-content">
                             <span class="timeline-year">2021</span>
                             <h3>The Beginning</h3>
@@ -183,6 +291,10 @@
                     </div>
                     <div class="timeline-item fade-up">
                         <div class="timeline-dot"></div>
+                        <div class="timeline-img">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                                alt="First Major Wins">
+                        </div>
                         <div class="timeline-content">
                             <span class="timeline-year">2022</span>
                             <h3>First Major Wins</h3>
@@ -192,6 +304,10 @@
                     </div>
                     <div class="timeline-item fade-up">
                         <div class="timeline-dot"></div>
+                        <div class="timeline-img">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                                alt="Rapid Expansion">
+                        </div>
                         <div class="timeline-content">
                             <span class="timeline-year">2023</span>
                             <h3>Rapid Expansion</h3>
@@ -201,6 +317,10 @@
                     </div>
                     <div class="timeline-item fade-up">
                         <div class="timeline-dot"></div>
+                        <div class="timeline-img">
+                            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                                alt="Industry Recognition">
+                        </div>
                         <div class="timeline-content">
                             <span class="timeline-year">2024</span>
                             <h3>Industry Recognition</h3>
@@ -210,6 +330,10 @@
                     </div>
                     <div class="timeline-item fade-up">
                         <div class="timeline-dot"></div>
+                        <div class="timeline-img">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                                alt="Scaling New Heights">
+                        </div>
                         <div class="timeline-content">
                             <span class="timeline-year">2025</span>
                             <h3>Scaling New Heights</h3>
@@ -274,14 +398,66 @@
             </div>
         </section>
 
+        <!-- Portfolio / Gallery Section -->
+        <section class="about-gallery-section">
+            <div class="container">
+                <div class="about-gallery-header text-center">
+                    <h2 class="section-heading fade-up">Our <span class="highlight">Portfolio</span></h2>
+                </div>
+            </div>
+            <div class="about-gallery-slider-wrapper">
+                <button class="gallery-nav gallery-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="gallery-nav gallery-next"><i class="fas fa-chevron-right"></i></button>
+                <div class="about-gallery-slider">
+                    <div class="about-gallery-track">
+                        <div class="gallery-item">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Analytics Dashboard">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Brand Design">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Data Visualization">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Campaign Strategy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Content Production">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://images.unsplash.com/photo-1576091160550-217359f42f8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Healthcare Marketing">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Fashion Campaign">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA Section -->
         <section class="about-cta-section">
+            <!-- Decorative glow elements -->
+            <div class="cta-glow cta-glow-1"></div>
+            <div class="cta-glow cta-glow-2"></div>
             <div class="container text-center">
-                <h2 class="section-heading fade-up">Ready to <span class="highlight">Grow</span> With Us?</h2>
+                <span class="cta-badge fade-up"><i class="fas fa-rocket"></i> Let's Collaborate</span>
+                <h2 class="section-heading fade-up">Ready to <span class="highlight">Grow</span><br>With Us?</h2>
                 <p class="cta-desc fade-up">Let's build something extraordinary together. Your brand's next chapter
                     starts here.</p>
-                <a href="index.html#contact" class="btn btn-primary fade-up">Start a Project <i
-                        class="fas fa-arrow-right"></i></a>
+                <div class="cta-buttons fade-up">
+                    <a href="contact.html" class="btn btn-primary">Start a Project <i
+                            class="fas fa-arrow-right"></i></a>
+                    <a href="index.html#services" class="btn btn-outline-light">Explore Services</a>
+                </div>
             </div>
         </section>
     </main>

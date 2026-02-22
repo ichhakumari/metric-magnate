@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Identity & UI/UX | Metric Magnate</title>
+    <meta name="description"
+        content="Premium brand identity design and UI/UX services by Metric Magnate. We craft stunning visual identities and user experiences that set brands apart.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="services.css">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">METRIC<span>MAGNATE</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-dropdown">
+                    <a href="index.html#services" class="nav-link">Services <i
+                            class="fas fa-chevron-down nav-dd-arrow"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="content-strategy.html"><i class="fas fa-pen-nib"></i> Content Strategy &
+                                Scripts</a></li>
+                        <li><a href="seo.html"><i class="fas fa-chart-line"></i> Institutional SEO</a></li>
+                        <li><a href="brand-identity.html"><i class="fas fa-palette"></i> Brand Identity & UI/UX</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="index.html#work" class="nav-link">Our Work</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="svc-hero">
+            <div class="container">
+                <span class="svc-hero-badge fade-up"><i class="fas fa-palette"></i> Design Services</span>
+                <h1 class="fade-up">Brand Identity<br>& <span class="highlight">UI/UX</span></h1>
+                <p class="svc-hero-desc">We design iconic brand identities and intuitive digital experiences that
+                    make your brand unforgettable and your users delighted.</p>
+                <div class="svc-hero-btns fade-up">
+                    <a href="contact.html" class="btn btn-primary">Start Your Brand <i
+                            class="fas fa-arrow-right"></i></a>
+                    <a href="#portfolio" class="btn btn-outline-light">View Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About + Video -->
+        <section class="svc-about">
+            <div class="container">
+                <div class="svc-about-split">
+                    <div class="svc-about-text">
+                        <span class="sub-title fade-up">Our Craft</span>
+                        <h2 class="fade-up">Design That <span class="highlight">Inspires</span></h2>
+                        <p class="fade-up">From logo design to complete brand systems, from wireframes to polished
+                            interfaces — we create visual experiences that resonate emotionally and perform
+                            commercially.</p>
+                        <p class="fade-up">Our design philosophy blends aesthetics with strategy, ensuring every
+                            pixel serves a purpose and every interaction tells your brand story.</p>
+                        <div class="svc-about-features fade-up">
+                            <span class="svc-feature-tag"><i class="fas fa-check"></i> Logo Design</span>
+                            <span class="svc-feature-tag"><i class="fas fa-check"></i> Brand Guidelines</span>
+                            <span class="svc-feature-tag"><i class="fas fa-check"></i> Web Design</span>
+                            <span class="svc-feature-tag"><i class="fas fa-check"></i> App UI/UX</span>
+                            <span class="svc-feature-tag"><i class="fas fa-check"></i> Packaging Design</span>
+                        </div>
+                    </div>
+                    <div class="svc-about-video fade-up">
+                        <video autoplay muted loop playsinline>
+                            <source src="https://cdn.pixabay.com/video/2019/10/01/27376-364392992_large.mp4"
+                                type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section class="svc-portfolio" id="portfolio">
+            <div class="container">
+                <div class="svc-portfolio-header">
+                    <span class="sub-title fade-up">Portfolio</span>
+                    <h2 class="fade-up">Designs That <span class="highlight">Stand Out</span></h2>
+                </div>
+                <div class="svc-portfolio-slider">
+                    <div class="svc-portfolio-track">
+                        <div class="svc-portfolio-item">
+                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=80"
+                                alt="Brand Design">
+                            <div class="svc-portfolio-overlay">
+                                <h4>Fashion Brand Identity</h4>
+                                <span>Complete Rebrand</span>
+                            </div>
+                        </div>
+                        <div class="svc-portfolio-item">
+                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80"
+                                alt="UI Design">
+                            <div class="svc-portfolio-overlay">
+                                <h4>FinTech App UI</h4>
+                                <span>iOS & Android</span>
+                            </div>
+                        </div>
+                        <div class="svc-portfolio-item">
+                            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&q=80"
+                                alt="Logo Design">
+                            <div class="svc-portfolio-overlay">
+                                <h4>Luxury Restaurant</h4>
+                                <span>Logo & Packaging</span>
+                            </div>
+                        </div>
+                        <div class="svc-portfolio-item">
+                            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&q=80"
+                                alt="Web Design">
+                            <div class="svc-portfolio-overlay">
+                                <h4>E-commerce Website</h4>
+                                <span>Full UX Redesign</span>
+                            </div>
+                        </div>
+                        <div class="svc-portfolio-item">
+                            <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?w=600&q=80"
+                                alt="Brand System">
+                            <div class="svc-portfolio-overlay">
+                                <h4>Healthcare Brand</h4>
+                                <span>Identity System</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="svc-slider-nav">
+                    <button class="svc-slider-btn svc-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="svc-slider-btn svc-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="svc-overview">
+            <div class="container">
+                <div class="svc-overview-header">
+                    <span class="sub-title fade-up">What We Offer</span>
+                    <h2 class="fade-up">Our Design <span class="highlight">Services</span></h2>
+                </div>
+                <div class="svc-overview-grid">
+                    <div class="svc-overview-card fade-up">
+                        <div class="svc-card-icon"><i class="fas fa-pencil-ruler"></i></div>
+                        <h3>Logo Design</h3>
+                        <p>Iconic, memorable logos that capture your brand essence. Multiple concepts, unlimited
+                            revisions until perfection.</p>
+                    </div>
+                    <div class="svc-overview-card fade-up">
+                        <div class="svc-card-icon"><i class="fas fa-book-open"></i></div>
+                        <h3>Brand Guidelines</h3>
+                        <p>Comprehensive brand books with typography, color palettes, voice guidelines, and usage rules
+                            for consistent brand expression.</p>
+                    </div>
+                    <div class="svc-overview-card fade-up">
+                        <div class="svc-card-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Web Design</h3>
+                        <p>Stunning, responsive websites with pixel-perfect design, smooth animations, and intuitive
+                            navigation for maximum conversions.</p>
+                    </div>
+                    <div class="svc-overview-card fade-up">
+                        <div class="svc-card-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>App UI/UX</h3>
+                        <p>User-centered mobile app interfaces with wireframes, prototypes, and high-fidelity designs
+                            for iOS and Android.</p>
+                    </div>
+                    <div class="svc-overview-card fade-up">
+                        <div class="svc-card-icon"><i class="fas fa-box-open"></i></div>
+                        <h3>Packaging Design</h3>
+                        <p>Eye-catching product packaging that tells your brand story on the shelf and builds instant
+                            recognition with consumers.</p>
+                    </div>
+                    <div class="svc-overview-card fade-up">
+                        <div class="svc-card-icon"><i class="fas fa-images"></i></div>
+                        <h3>Social Media Design</h3>
+                        <p>Scroll-stopping social media templates, cover designs, and ad creatives that maintain brand
+                            consistency across all platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="svc-faq">
+            <div class="container">
+                <div class="svc-faq-header">
+                    <span class="sub-title fade-up">FAQ</span>
+                    <h2 class="fade-up">Frequently <span class="highlight">Asked Questions</span></h2>
+                    <p class="fade-up">Everything you need to know about our design and branding process.</p>
+                </div>
+                <div class="svc-faq-grid">
+                    <div class="svc-faq-card">
+                        <div class="svc-faq-num">01 <i class="fas fa-fire"></i></div>
+                        <h4>How long does a brand identity project take?</h4>
+                        <p>A typical brand identity project takes 3-6 weeks, depending on complexity. This includes
+                            research, concept development, and finalization.</p>
+                    </div>
+                    <div class="svc-faq-card">
+                        <div class="svc-faq-num">02 <i class="fas fa-fire"></i></div>
+                        <h4>What's a UI/UX design process?</h4>
+                        <p>We follow a structured process: user research, wireframing, high-fidelity design,
+                            prototyping,
+                            usability testing, and developer handoff.</p>
+                    </div>
+                    <div class="svc-faq-card">
+                        <div class="svc-faq-num">03 <i class="fas fa-fire"></i></div>
+                        <h4>What files do I receive?</h4>
+                        <p>You get all source files (AI, PSD, Figma), exports in all formats (SVG, PNG, PDF), and a
+                            comprehensive brand guidelines document.</p>
+                    </div>
+                    <div class="svc-faq-card">
+                        <div class="svc-faq-num">04 <i class="fas fa-fire"></i></div>
+                        <h4>Can you redesign an existing brand?</h4>
+                        <p>Absolutely. We specialize in brand refreshes and full rebrands that modernize your identity
+                            while preserving brand equity and recognition.</p>
+                    </div>
+                    <div class="svc-faq-card">
+                        <div class="svc-faq-num">05 <i class="fas fa-fire"></i></div>
+                        <h4>Do you handle web development too?</h4>
+                        <p>Yes, we offer end-to-end design and development. Our designers and developers work together
+                            to bring your vision to life pixel-perfectly.</p>
+                    </div>
+                    <div class="svc-faq-card">
+                        <div class="svc-faq-num">06 <i class="fas fa-fire"></i></div>
+                        <h4>How many design revisions do you offer?</h4>
+                        <p>We include 3 rounds of revisions for each deliverable. Our process ensures alignment from
+                            the start, so revisions are minimal and focused.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="svc-testimonials">
+            <div class="container">
+                <div class="svc-testimonials-header">
+                    <span class="sub-title fade-up">Testimonials</span>
+                    <h2 class="fade-up">What Our <span class="highlight">Clients Say</span></h2>
+                </div>
+                <div class="svc-testimonials-grid">
+                    <div class="svc-testi-card">
+                        <div class="svc-testi-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <blockquote>"The brand identity they created for us is absolute perfection. Every touchpoint
+                            feels premium and cohesive. Our customers love it."</blockquote>
+                        <div class="svc-testi-author">
+                            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Client"
+                                class="svc-testi-avatar">
+                            <div class="svc-testi-author-info">
+                                <h5>Meera Agarwal</h5>
+                                <span>Fashion Brand Founder</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="svc-testi-card">
+                        <div class="svc-testi-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <blockquote>"Their UI/UX redesign of our app increased user retention by 60%. The interface
+                            is beautiful and incredibly intuitive."</blockquote>
+                        <div class="svc-testi-author">
+                            <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Client"
+                                class="svc-testi-avatar">
+                            <div class="svc-testi-author-info">
+                                <h5>Rohit Kumar</h5>
+                                <span>FinTech Startup</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="svc-testi-card">
+                        <div class="svc-testi-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <blockquote>"From packaging to website — every design element is stunning. They truly
+                            understand how to make a brand feel premium."</blockquote>
+                        <div class="svc-testi-author">
+                            <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Client"
+                                class="svc-testi-avatar">
+                            <div class="svc-testi-author-info">
+                                <h5>Kavita Reddy</h5>
+                                <span>FMCG Brand Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="svc-cta">
+            <div class="cta-glow cta-glow-1"></div>
+            <div class="cta-glow cta-glow-2"></div>
+            <div class="container text-center">
+                <span class="cta-badge fade-up"><i class="fas fa-rocket"></i> Let's Design</span>
+                <h2 class="fade-up">Ready to Build a<br><span class="highlight">Stunning Brand?</span></h2>
+                <p class="fade-up">Let's create a visual identity that makes your brand unforgettable.</p>
+                <div class="cta-buttons fade-up">
+                    <a href="contact.html" class="btn btn-primary">Start Your Brand <i
+                            class="fas fa-arrow-right"></i></a>
+                    <a href="index.html#services" class="btn btn-outline-light">Explore Services</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">Metric <span>Magnate</span></a>
+                    <p class="brand-tagline">Elevating digital metrics for ambitious brands. We blend data science with
+                        surgical precision to dominate search and social landscapes.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#work">Work</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="content-strategy.html">Content Strategy</a></li>
+                        <li><a href="seo.html">Institutional SEO</a></li>
+                        <li><a href="brand-identity.html">Brand Identity</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col">
+                    <h4>Let's Talk</h4>
+                    <div class="contact-info">
+                        <p>India Office: <span>Delhi NCR</span></p>
+                        <p>Email: <a href="mailto:info@metricmagnate.com">info@metricmagnate.com</a></p>
+                    </div>
+                    <a href="contact.html" class="footer-cta-btn">Start a Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2026 Metric Magnate. Crafted with Excellence in India.</p>
+                </div>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="services.js"></script>
+</body>
+
+</html>
