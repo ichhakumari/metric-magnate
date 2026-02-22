@@ -58,13 +58,37 @@
         <!-- Hero -->
         <section class="svc-hero">
             <div class="container">
-                <span class="svc-hero-badge fade-up"><i class="fas fa-pen-nib"></i> Content Services</span>
-                <h1 class="fade-up">Content Strategy<br>& <span class="highlight">Scripts</span></h1>
-                <p class="svc-hero-desc">We craft data-backed content strategies and compelling scripts that captivate
-                    your audience, boost engagement, and drive real business growth.</p>
-                <div class="svc-hero-btns fade-up">
-                    <a href="contact.html" class="btn btn-primary">Get Started <i class="fas fa-arrow-right"></i></a>
-                    <a href="#portfolio" class="btn btn-outline-light">View Our Work</a>
+                <div class="svc-hero-grid">
+                    <div class="svc-hero-content">
+                        <span class="svc-hero-badge">Content Strategy</span>
+                        <h1>CONTENT<br><span class="highlight-italic">STRATEGY.</span></h1>
+                        <p class="svc-hero-desc">We craft data-backed content strategies and compelling scripts that
+                            captivate your audience, boost engagement, and drive real business growth.</p>
+                        <div class="svc-hero-btns">
+                            <a href="contact.html" class="btn-hero-dark">Get Started</a>
+                            <a href="#portfolio" class="btn-hero-dark">View Our Work</a>
+                        </div>
+                    </div>
+                    <div class="svc-hero-visual">
+                        <img src="https://illustrations.popsy.co/amber/creative-work.svg"
+                            alt="Content Strategy Illustration">
+                    </div>
+                </div>
+                <div class="svc-hero-bottom">
+                    <div class="svc-hero-stats">
+                        <div class="svc-stat">
+                            <span class="svc-stat-num">10M+</span>
+                            <span class="svc-stat-label">Content Views</span>
+                        </div>
+                        <div class="svc-stat">
+                            <span class="svc-stat-num">3x</span>
+                            <span class="svc-stat-label">Engagement Rate</span>
+                        </div>
+                    </div>
+                    <div class="svc-hero-scroll">
+                        <span>SCROLL</span>
+                        <div class="scroll-icon"><i class="fas fa-computer-mouse"></i></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -157,49 +181,116 @@
             </div>
         </section>
 
-        <!-- Services Overview -->
-        <section class="svc-overview">
-            <div class="container">
-                <div class="svc-overview-header">
-                    <span class="sub-title fade-up">What We Offer</span>
-                    <h2 class="fade-up">Our Content <span class="highlight">Services</span></h2>
-                </div>
-                <div class="svc-overview-grid">
-                    <div class="svc-overview-card fade-up">
-                        <div class="svc-card-num">01</div>
-                        <h3>Social Media Scripts</h3>
-                        <p>Scroll-stopping scripts for Instagram Reels, YouTube Shorts, and TikTok that boost engagement
-                            and follower growth.</p>
+        <!-- Services Overview (Stacked Full-Screen Cards) -->
+        <section class="services-stack-section">
+            <div class="container" style="padding-top: 30px; padding-bottom: 20px;">
+                <span class="sub-title">What We Offer</span>
+                <h2 style="font-size: 48px; font-weight: 800; line-height: 1.2;">Our Content <span
+                        class="highlight">Services</span></h2>
+            </div>
+            <div class="stack-container">
+                <div class="stack-cards">
+                    <!-- Card 1 -->
+                    <div class="service-stack-card card-1">
+                        <div class="stack-card-inner">
+                            <div class="stack-content">
+                                <span class="card-num">01</span>
+                                <h2 class="card-title">Social Media <span class="highlight">Scripts</span></h2>
+                                <p class="card-desc">Scroll-stopping scripts for Instagram Reels, YouTube Shorts, and
+                                    TikTok that boost engagement and follower growth.</p>
+                                <a href="contact.html" class="stack-cta-btn">Get Started <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="stack-img">
+                                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+                                    alt="Social Media Scripts">
+                            </div>
+                        </div>
                     </div>
-                    <div class="svc-overview-card fade-up">
-                        <div class="svc-card-num">02</div>
-                        <h3>Blog & SEO Content</h3>
-                        <p>Long-form articles and blog posts optimized for search engines, driving organic traffic and
-                            establishing authority.</p>
+                    <!-- Card 2 -->
+                    <div class="service-stack-card card-2">
+                        <div class="stack-card-inner">
+                            <div class="stack-content">
+                                <span class="card-num">02</span>
+                                <h2 class="card-title">Blog & SEO <span class="highlight">Content</span></h2>
+                                <p class="card-desc">Long-form articles and blog posts optimized for search engines,
+                                    driving organic traffic and establishing authority.</p>
+                                <a href="contact.html" class="stack-cta-btn">Get Started <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="stack-img">
+                                <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+                                    alt="Blog & SEO Content">
+                            </div>
+                        </div>
                     </div>
-                    <div class="svc-overview-card fade-up">
-                        <div class="svc-card-num">03</div>
-                        <h3>Video Scriptwriting</h3>
-                        <p>Professional scripts for brand videos, explainers, ads, and documentary-style content that
-                            tells your story.</p>
+                    <!-- Card 3 -->
+                    <div class="service-stack-card card-3">
+                        <div class="stack-card-inner">
+                            <div class="stack-content">
+                                <span class="card-num">03</span>
+                                <h2 class="card-title">Video <span class="highlight">Scriptwriting</span></h2>
+                                <p class="card-desc">Professional scripts for brand videos, explainers, ads, and
+                                    documentary-style content that tells your story.</p>
+                                <a href="contact.html" class="stack-cta-btn">Get Started <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="stack-img">
+                                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+                                    alt="Video Scriptwriting">
+                            </div>
+                        </div>
                     </div>
-                    <div class="svc-overview-card fade-up">
-                        <div class="svc-card-num">04</div>
-                        <h3>Ad Copywriting</h3>
-                        <p>High-converting copy for Google Ads, Meta Ads, and LinkedIn campaigns that maximize your ad
-                            spend ROI.</p>
+                    <!-- Card 4 -->
+                    <div class="service-stack-card card-4">
+                        <div class="stack-card-inner">
+                            <div class="stack-content">
+                                <span class="card-num">04</span>
+                                <h2 class="card-title">Ad <span class="highlight">Copywriting</span></h2>
+                                <p class="card-desc">High-converting copy for Google Ads, Meta Ads, and LinkedIn
+                                    campaigns that maximize your ad spend ROI.</p>
+                                <a href="contact.html" class="stack-cta-btn">Get Started <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="stack-img">
+                                <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+                                    alt="Ad Copywriting">
+                            </div>
+                        </div>
                     </div>
-                    <div class="svc-overview-card fade-up">
-                        <div class="svc-card-num">05</div>
-                        <h3>Email Marketing</h3>
-                        <p>Automated email sequences, newsletters, and drip campaigns that nurture leads and drive
-                            repeat purchases.</p>
+                    <!-- Card 5 -->
+                    <div class="service-stack-card card-5">
+                        <div class="stack-card-inner">
+                            <div class="stack-content">
+                                <span class="card-num">05</span>
+                                <h2 class="card-title">Email <span class="highlight">Marketing</span></h2>
+                                <p class="card-desc">Automated email sequences, newsletters, and drip campaigns that
+                                    nurture leads and drive repeat purchases.</p>
+                                <a href="contact.html" class="stack-cta-btn">Get Started <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="stack-img">
+                                <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+                                    alt="Email Marketing">
+                            </div>
+                        </div>
                     </div>
-                    <div class="svc-overview-card fade-up">
-                        <div class="svc-card-num">06</div>
-                        <h3>Content Strategy</h3>
-                        <p>Full-funnel content roadmaps with editorial calendars, audience research, and competitor
-                            analysis for sustained growth.</p>
+                    <!-- Card 6 -->
+                    <div class="service-stack-card card-6">
+                        <div class="stack-card-inner">
+                            <div class="stack-content">
+                                <span class="card-num">06</span>
+                                <h2 class="card-title">Content <span class="highlight">Strategy</span></h2>
+                                <p class="card-desc">Full-funnel content roadmaps with editorial calendars, audience
+                                    research, and competitor analysis for sustained growth.</p>
+                                <a href="contact.html" class="stack-cta-btn">Get Started <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="stack-img">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+                                    alt="Content Strategy">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -256,11 +347,11 @@
         </section>
 
         <!-- Testimonials -->
-        <section class="svc-testimonials">
+        <!-- <section class="svc-testimonials">
             <div class="container">
                 <div class="svc-testimonials-header">
                     <span class="sub-title fade-up">Testimonials</span>
-                    <h2 class="fade-up">What Our <span class="highlight">Clients Say</span></h2>
+                    <h2 class="testi-heading">Words of <span class="highlight">Thanks</span></h2>
                 </div>
                 <div class="svc-testimonials-grid">
                     <div class="svc-testi-card">
@@ -314,21 +405,35 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <!-- CTA -->
-        <section class="svc-cta">
-            <div class="cta-glow cta-glow-1"></div>
-            <div class="cta-glow cta-glow-2"></div>
-            <div class="container text-center">
-                <span class="cta-badge fade-up"><i class="fas fa-rocket"></i> Let's Create</span>
-                <h2 class="fade-up">Ready to <span class="highlight">Transform</span><br>Your Content?</h2>
-                <p class="fade-up">Let's build a content engine that drives real business growth.</p>
-                <div class="cta-buttons fade-up">
-                    <a href="contact.html" class="btn btn-primary">Start a Project <i
-                            class="fas fa-arrow-right"></i></a>
-                    <a href="index.html#services" class="btn btn-outline-light">Explore Services</a>
+        <!-- Book a Call Marquee -->
+        <section class="book-call-section">
+            <p class="book-call-subtitle">LET'S SEE IF WE'RE A GOOD FIT WITH A 15 MIN CALL</p>
+            <div class="book-call-marquee">
+                <div class="book-call-track">
+                    <span class="book-call-text">Book a Call</span>
+                    <span class="book-call-dot">·</span>
+                    <span class="book-call-text">Book a Call</span>
+                    <span class="book-call-dot">·</span>
+                    <span class="book-call-text">Book a Call</span>
+                    <span class="book-call-dot">·</span>
+                    <span class="book-call-text">Book a Call</span>
+                    <span class="book-call-dot">·</span>
+                    <span class="book-call-text">Book a Call</span>
+                    <span class="book-call-dot">·</span>
+                    <span class="book-call-text">Book a Call</span>
+                    <span class="book-call-dot">·</span>
+                    <span class="book-call-text">Book a Call</span>
+                    <span class="book-call-dot">·</span>
+                    <span class="book-call-text">Book a Call</span>
+                    <span class="book-call-dot">·</span>
                 </div>
+            </div>
+            <div class="book-call-btns">
+                <a href="tel:+918448473282" class="book-call-btn"><i class="fas fa-phone"></i> Call</a>
+                <a href="https://wa.me/918448473282?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+                    target="_blank" class="book-call-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             </div>
         </section>
     </main>

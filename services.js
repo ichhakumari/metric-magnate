@@ -10,40 +10,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Hero entrance
+    // Hero entrance — staggered sequence
+    const heroBadge = document.querySelector('.svc-hero-badge');
     const heroH1 = document.querySelector('.svc-hero h1');
     const heroDesc = document.querySelector('.svc-hero-desc');
-    if (heroH1) gsap.from(heroH1, { y: 80, opacity: 0, duration: 1.2, ease: 'power4.out', delay: 0.3 });
-    if (heroDesc) gsap.from(heroDesc, { y: 30, opacity: 0, duration: 1, ease: 'power3.out', delay: 0.6 });
+    const heroBtns = document.querySelector('.svc-hero-btns');
+    const heroVisual = document.querySelector('.svc-hero-visual');
+    const heroBottom = document.querySelector('.svc-hero-bottom');
 
-    // Portfolio Slider
+    if (heroBadge) gsap.from(heroBadge, { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out', delay: 0.2 });
+    if (heroH1) gsap.from(heroH1, { y: 80, opacity: 0, duration: 1.2, ease: 'power4.out', delay: 0.4 });
+    if (heroDesc) gsap.from(heroDesc, { y: 30, opacity: 0, duration: 1, ease: 'power3.out', delay: 0.7 });
+    if (heroBtns) gsap.from(heroBtns, { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out', delay: 0.9 });
+    if (heroVisual) gsap.from(heroVisual, { x: 60, opacity: 0, duration: 1.2, ease: 'power3.out', delay: 0.5 });
+    if (heroBottom) gsap.from(heroBottom, { y: 20, opacity: 0, duration: 0.8, ease: 'power3.out', delay: 1.1 });
+
+    // Portfolio Marquee — clone items for seamless infinite scroll
     const track = document.querySelector('.svc-portfolio-track');
     const items = document.querySelectorAll('.svc-portfolio-item');
-    const nextBtn = document.querySelector('.svc-next');
-    const prevBtn = document.querySelector('.svc-prev');
 
     if (track && items.length) {
-        let index = 0;
-        const gap = 24;
-
-        function getVisible() {
-            if (window.innerWidth > 992) return 3;
-            if (window.innerWidth > 768) return 2;
-            return 1;
-        }
-
-        function slide() {
-            const itemW = items[0].offsetWidth + gap;
-            const maxIdx = Math.max(0, items.length - getVisible());
-            if (index > maxIdx) index = maxIdx;
-            if (index < 0) index = 0;
-            gsap.to(track, { x: -index * itemW, duration: 0.6, ease: 'power4.out' });
-        }
-
-        if (nextBtn) nextBtn.addEventListener('click', () => { index++; slide(); });
-        if (prevBtn) prevBtn.addEventListener('click', () => { index--; slide(); });
-        window.addEventListener('resize', slide);
-        slide();
+        // Clone all items and append for seamless loop
+        items.forEach(item => {
+            const clone = item.cloneNode(true);
+            track.appendChild(clone);
+        });
     }
 
     // FAQ cards stagger entrance
@@ -51,6 +42,40 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: { trigger: '.svc-faq-grid', start: 'top 80%' },
         y: 40, opacity: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out'
     });
+
+    // ====== Overview cards — scroll-triggered in-view + tilt ======
+    const overviewCards = document.querySelectorAll('.svc-overview-card');
+
+    // IntersectionObserver to add 'in-view' class for staggered entry
+    if (overviewCards.length) {
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    cardObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        overviewCards.forEach(card => cardObserver.observe(card));
+
+        // Subtle 3D tilt on hover
+        overviewCards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -4;
+                const rotateY = ((x - centerX) / centerX) * 4;
+                card.style.transform = `translateY(-8px) scale(1.02) perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+    }
 
     // Testimonial cards stagger
     gsap.from('.svc-testi-card', {
