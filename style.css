@@ -1327,8 +1327,7 @@ h2 {
     height: 35px;
     width: auto;
     object-fit: contain;
-    filter: grayscale(100%);
-    transition: 0.4s;
+    transition: 0.4s ease;
 }
 
 .brand-item:hover img {
