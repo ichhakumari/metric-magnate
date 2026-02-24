@@ -368,7 +368,7 @@ h3,
     height: clamp(8px, 1.5vw, 15px);
     border-radius: 50%;
     margin-left: 12px;
-    vertical-align: middle;
+    vertical-align: bottom;
     margin-bottom: 0.1em;
 }
 
@@ -443,87 +443,134 @@ h3,
 }
 
 @media (max-width: 768px) {
+
+    /* Full-screen hero, content stretches top-to-bottom */
     .hero {
-        padding-top: 100px;
-        padding-bottom: 40px;
-        align-items: flex-start;
+        min-height: 100dvh;
+        padding-top: 80px;
+        padding-bottom: 48px;
+        display: flex;
+        align-items: stretch;
     }
 
-    /* Make hero-new-layout a flex column so we can reorder children */
+    .hero>.container {
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    /* Left-aligned editorial column — fills full available height */
     .hero-new-layout {
         display: flex;
         flex-direction: column;
-        gap: 0;
+        justify-content: space-between;
+        gap: 26px;
+        width: 100%;
+        min-height: calc(100dvh - 128px);
+        padding-left: 20px;
+        border-left: 5px solid var(--accent-color);
     }
 
-    /* Dissolve middle-row so its children (BUILD h1 + hero-desc)
-       become direct flex items of hero-new-layout */
+    /* Brand badge on top via pseudo-element */
+    .hero-new-layout::before {
+        content: '✦ Digital Marketing Agency';
+        display: block;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--accent-color);
+        order: 0;
+        margin-bottom: 0;
+    }
+
     .middle-row {
         display: contents;
     }
 
-    /* Order: 1=top-row(DEFINE DESIGN), 2=BUILD h1, 3=bottom-row(MARKET), 4=description */
-    .top-row {
-        order: 1;
-        margin-bottom: 8px;
-    }
-
-    /* Font sizing for ALL hero h1s */
+    /* Words — big, tight letter-spacing, relaxed line-height to spread */
     .hero-new-layout h1 {
-        font-size: clamp(36px, 11vw, 52px);
-        letter-spacing: -1px;
-        line-height: 1.1;
-    }
-
-    /* DEFINE and DESIGN on separate lines — DESIGN right-aligned */
-    .top-row h1 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        width: 100%;
-    }
-
-    .word-left {
-        display: block;
-        width: 100%;
+        font-size: 64px;
+        letter-spacing: -3px;
+        line-height: 1.05;
+        margin: 0;
         text-align: left;
     }
 
+    /* Dissolve top-row so DEFINE and DESIGN become direct flex items */
+    .top-row {
+        display: contents;
+    }
+
+    /* Dissolve the h1 wrapper too so the spans are direct items */
+    .top-row h1 {
+        display: contents;
+    }
+
+    /* Each word span — becomes a direct flex item */
+    .word-left,
     .word-right {
         display: block;
         width: 100%;
-        text-align: right;
+        text-align: left;
+        font-size: 64px;
+        font-weight: 800;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        letter-spacing: -3px;
+        line-height: 1.0;
     }
 
-    /* The h1 inside middle-row (BUILD) — explicit block */
     .middle-row>h1 {
         order: 2;
-        margin-bottom: 8px;
         display: block;
+        text-align: left;
+        margin: 0;
     }
 
-    /* MARKET row — right aligned */
     .bottom-row {
         order: 3;
-        justify-content: flex-end;
+        justify-content: flex-start;
         padding-right: 0;
-        margin-bottom: 20px;
+        margin-bottom: 0;
     }
 
-    /* Description paragraph — pushed to very bottom */
+    /* Description — sits at the bottom, separated from words */
     .hero-desc {
         order: 4;
         text-align: left;
         max-width: 100%;
-        margin-top: 0;
+        margin: 0;
+        padding-top: 20px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-desc p {
+        font-size: 14px;
+        line-height: 1.65;
+        color: #666;
+        max-width: 280px;
+        margin: 0;
+    }
+
+    /* Scroll hint at very bottom */
+    .hero-new-layout::after {
+        content: '↓ Scroll to explore';
+        display: block;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #aaa;
+        order: 5;
+        padding-top: 16px;
     }
 
     .dot {
         display: inline-block;
-        width: 8px;
-        height: 8px;
-        margin-left: 5px;
+        width: 9px;
+        height: 9px;
+        margin-left: 4px;
+        vertical-align: bottom;
     }
 }
 
@@ -1095,27 +1142,59 @@ h2 {
         padding-top: 80px;
     }
 
+    /* Switch from grid to flex column so order works */
     .stack-card-inner {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         padding: 0 24px 60px;
-        gap: 30px;
+        gap: 16px;
         align-items: flex-start;
     }
 
+    /* Dissolve .stack-content so its children become direct flex items */
+    .stack-content {
+        display: contents;
+    }
+
+    /* Order: number → title → image → desc → button */
+    .card-num {
+        order: 1;
+    }
+
+    .card-title {
+        order: 2;
+    }
+
     .stack-img {
-        display: none;
+        order: 3;
+    }
+
+    .card-desc {
+        order: 4;
+    }
+
+    .stack-cta-btn {
+        order: 5;
+    }
+
+    .stack-img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 16px;
+        margin: 4px 0;
     }
 
     .card-title {
         font-size: clamp(28px, 9vw, 44px);
         letter-spacing: -1px;
         line-height: 1.1;
-        margin-bottom: 20px;
+        margin-bottom: 0;
     }
 
     .card-desc {
         font-size: 15px;
-        margin-bottom: 28px;
+        margin-bottom: 8px;
     }
 
     .stack-cta-btn {
@@ -1318,7 +1397,7 @@ h2 {
 }
 
 .card-inner {
-    padding: 45px 30px 35px;
+    padding: 35px 20px 25px;
     border-radius: 22px;
 }
 
@@ -1785,7 +1864,7 @@ h2 {
 
 .testi-card {
     background: #ffffff;
-    padding: 80px 40px 40px;
+    padding: 65px 35px 35px;
     border-radius: 40px;
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
     position: relative;
@@ -1825,7 +1904,7 @@ h2 {
 }
 
 .client-quote {
-    font-size: 20px;
+    font-size: 16px;
     font-style: italic;
     color: #444;
     line-height: 1.8;
