@@ -228,4 +228,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.addEventListener('resize', updateGallery);
     }
+
+    // ── Team Slider Nav Buttons (mobile only) ──
+    const teamGrid = document.getElementById('teamGrid');
+    const teamPrev = document.getElementById('teamPrev');
+    const teamNext = document.getElementById('teamNext');
+
+    if (teamGrid && teamPrev && teamNext) {
+        function scrollTeam(dir) {
+            if (window.innerWidth > 768) return; // desktop: do nothing
+            const card = teamGrid.querySelector('.team-card');
+            if (!card) return;
+            const cardWidth = card.offsetWidth + 16; // 16 = gap
+            teamGrid.scrollBy({ left: dir * cardWidth, behavior: 'smooth' });
+        }
+
+        teamPrev.addEventListener('click', () => scrollTeam(-1));
+        teamNext.addEventListener('click', () => scrollTeam(1));
+    }
 });

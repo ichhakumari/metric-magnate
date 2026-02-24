@@ -345,6 +345,11 @@ h3,
     align-items: baseline;
 }
 
+.word-left,
+.word-right {
+    display: inline;
+}
+
 .top-row {
     display: flex;
     align-items: flex-start;
@@ -415,20 +420,21 @@ h3,
     }
 
     .middle-row {
-        flex-direction: column-reverse;
-        align-items: flex-end;
+        flex-direction: column;
+        align-items: flex-start;
         padding-left: 0;
+        gap: 10px;
     }
 
     .hero-desc {
-        text-align: right;
-        margin-top: 20px;
+        text-align: left;
+        margin-top: 10px;
     }
 
     .bottom-row {
-        justify-content: center;
+        justify-content: flex-start;
         padding-right: 0;
-        margin-top: 20px;
+        margin-top: 0;
     }
 
     .starburst {
@@ -437,18 +443,87 @@ h3,
 }
 
 @media (max-width: 768px) {
-    .hero-new-layout h1 {
-        font-size: 42px;
-        letter-spacing: -1px;
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 40px;
+        align-items: flex-start;
     }
 
+    /* Make hero-new-layout a flex column so we can reorder children */
+    .hero-new-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    /* Dissolve middle-row so its children (BUILD h1 + hero-desc)
+       become direct flex items of hero-new-layout */
+    .middle-row {
+        display: contents;
+    }
+
+    /* Order: 1=top-row(DEFINE DESIGN), 2=BUILD h1, 3=bottom-row(MARKET), 4=description */
     .top-row {
+        order: 1;
+        margin-bottom: 8px;
+    }
+
+    /* Font sizing for ALL hero h1s */
+    .hero-new-layout h1 {
+        font-size: clamp(36px, 11vw, 52px);
+        letter-spacing: -1px;
+        line-height: 1.1;
+    }
+
+    /* DEFINE and DESIGN on separate lines — DESIGN right-aligned */
+    .top-row h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         gap: 10px;
+        width: 100%;
+    }
+
+    .word-left {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .word-right {
+        display: block;
+        width: 100%;
+        text-align: right;
+    }
+
+    /* The h1 inside middle-row (BUILD) — explicit block */
+    .middle-row>h1 {
+        order: 2;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    /* MARKET row — right aligned */
+    .bottom-row {
+        order: 3;
+        justify-content: flex-end;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    /* Description paragraph — pushed to very bottom */
+    .hero-desc {
+        order: 4;
+        text-align: left;
+        max-width: 100%;
+        margin-top: 0;
     }
 
     .dot {
+        display: inline-block;
         width: 8px;
         height: 8px;
+        margin-left: 5px;
     }
 }
 
@@ -1013,14 +1088,39 @@ h2 {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .stack-card-inner {
-        padding: 0 40px;
-        align-items: flex-end;
-        padding-bottom: 100px;
+    .service-stack-card {
+        height: auto;
+        min-height: 100vh;
+        align-items: flex-start;
+        padding-top: 80px;
     }
 
-    .stack-img::after {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%);
+    .stack-card-inner {
+        grid-template-columns: 1fr;
+        padding: 0 24px 60px;
+        gap: 30px;
+        align-items: flex-start;
+    }
+
+    .stack-img {
+        display: none;
+    }
+
+    .card-title {
+        font-size: clamp(28px, 9vw, 44px);
+        letter-spacing: -1px;
+        line-height: 1.1;
+        margin-bottom: 20px;
+    }
+
+    .card-desc {
+        font-size: 15px;
+        margin-bottom: 28px;
+    }
+
+    .stack-cta-btn {
+        padding: 14px 26px;
+        font-size: 13px;
     }
 }
 
@@ -2122,5 +2222,65 @@ h2 {
 
     section {
         padding: 50px 0;
+    }
+}
+
+/* ============================================
+   FLOATING WHATSAPP BUTTON (all pages)
+   ============================================ */
+.whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    background: #25d366;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.12);
+    box-shadow: 0 10px 32px rgba(37, 211, 102, 0.55);
+}
+
+.whatsapp-float svg {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+}
+
+/* Pulse ring */
+.whatsapp-float::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #25d366;
+    opacity: 0.4;
+    animation: wa-pulse 2s ease-out infinite;
+}
+
+@keyframes wa-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+
+    70% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
     }
 }

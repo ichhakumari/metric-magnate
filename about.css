@@ -372,6 +372,16 @@
     color: #666;
 }
 
+/* Team Slider Wrapper — neutral on desktop */
+.team-slider-wrapper {
+    position: relative;
+}
+
+/* Nav buttons — hidden by default (desktop uses grid) */
+.team-nav {
+    display: none;
+}
+
 /* Team Section */
 .team-section {
     padding: 50px 0;
@@ -894,76 +904,205 @@
 }
 
 @media (max-width: 768px) {
+
+    /* ── Hero ── */
     .about-hero {
-        min-height: 60vh;
-        padding-top: 120px;
-        padding-bottom: 60px;
+        min-height: auto;
+        padding-top: 110px;
+        padding-bottom: 50px;
     }
 
     .about-hero h1 {
-        font-size: 38px;
+        font-size: clamp(32px, 10vw, 48px);
         letter-spacing: -1px;
+        line-height: 1.1;
     }
 
     .about-hero-desc {
-        font-size: 16px;
+        font-size: 15px;
     }
 
+    /* Hide floating icons on mobile — they overflow */
+    .hero-floats {
+        display: none;
+    }
+
+    /* ── Section headings ── */
     .section-heading {
-        font-size: 30px;
+        font-size: clamp(26px, 8vw, 36px);
         letter-spacing: -1px;
     }
 
+    /* ── Video section ── */
+    .about-video-container {
+        transform: none;
+        /* remove the desktop scale(0.85) zoom */
+        border-radius: 12px;
+    }
+
+    .about-video-container video {
+        min-height: 220px;
+    }
+
+    /* ── Mission / Vision / Values ── */
+    .mvv-split {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .mvv-left {
+        position: static;
+    }
+
+    .mvv-left-desc {
+        max-width: 100%;
+    }
+
+    .mvv-card {
+        padding: 28px 22px;
+    }
+
+    /* ── Stats ── */
     .about-stats-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 16px;
     }
 
     .about-stat-item::after {
         display: none;
     }
 
-    .team-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .team-img {
-        height: 250px;
-    }
-
+    /* ── Journey Timeline ── */
     .journey-timeline {
-        padding-left: 40px;
+        padding-left: 36px;
+    }
+
+    .timeline-line {
+        left: 10px;
     }
 
     .timeline-dot {
-        left: -31px;
+        left: -28px;
         width: 12px;
         height: 12px;
     }
 
-    .timeline-line {
-        left: 14px;
+    /* Stack image above text vertically */
+    .timeline-item {
+        flex-direction: column;
+        gap: 14px;
+        margin-bottom: 40px;
+    }
+
+    /* Hide thumbnail on very small screens to save space */
+    .timeline-img {
+        display: none;
+    }
+
+    .timeline-content h3 {
+        font-size: 18px;
+    }
+
+    /* ── Team — horizontal scroll-snap slider on mobile ── */
+    .team-section {
+        overflow: hidden;
+    }
+
+    .team-slider-wrapper {
+        position: relative;
+        padding: 0 10px;
+    }
+
+    /* Show nav buttons on mobile */
+    .team-nav {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid #e0e0e0;
+        background: #fff;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        color: #000;
+        font-size: 13px;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    .team-nav:hover {
+        background: #26d367;
+        color: #fff;
+        border-color: #26d367;
+    }
+
+    .team-prev {
+        left: 2px;
+    }
+
+    .team-next {
+        right: 2px;
+    }
+
+    .team-grid {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        padding: 8px 20px 20px;
+        /* hide scrollbar but keep scrollability */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .team-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .team-card {
+        flex: 0 0 75vw;
+        max-width: 300px;
+        scroll-snap-align: center;
+    }
+
+    .team-header {
+        margin-bottom: 30px;
+    }
+
+    .team-img {
+        height: 260px;
+    }
+
+    /* ── About Services Cards ── */
+    .about-svc-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .about-svc-card {
-        height: 320px;
+        height: 300px;
     }
 
     .about-svc-title {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .about-svc-overlay {
-        padding: 30px 24px;
+        padding: 24px 20px;
     }
 
     .about-services-section {
         padding: 50px 0 30px;
     }
 
+    /* ── Gallery ── */
     .gallery-item {
-        flex: 0 0 calc(100% - 0px);
+        flex: 0 0 100%;
     }
 
     .gallery-item img {
@@ -971,11 +1110,40 @@
     }
 
     .about-gallery-slider-wrapper {
-        padding: 0 40px;
+        padding: 0 44px;
     }
 
     .gallery-nav {
-        width: 40px;
-        height: 40px;
+        width: 38px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    /* ── CTA ── */
+    .about-cta-section {
+        padding: 50px 0;
+    }
+
+    .about-cta-section .section-heading {
+        font-size: clamp(28px, 8vw, 40px);
+    }
+
+    .cta-desc {
+        font-size: 15px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .about-cta-section .btn-primary,
+    .btn-outline-light {
+        padding: 14px 30px;
+        font-size: 14px;
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
     }
 }
