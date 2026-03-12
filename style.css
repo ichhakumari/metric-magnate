@@ -2615,14 +2615,20 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 22px;
     border: none;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.np-btn-icon i {
+    transform: rotate(-45deg);
+    transition: transform 0.3s;
 }
 
 .np-card:hover .np-btn-icon {
     background: #26d367;
+    color: #fff;
     transform: translate(2px, -2px) scale(1.05);
 }
 

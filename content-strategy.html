@@ -9,20 +9,70 @@
         content="Professional content strategy and scriptwriting services by Metric Magnate. We craft compelling narratives that engage audiences and drive conversions.">
     <!-- Critical CSS -->
     <style>
-      *{margin:0;padding:0;box-sizing:border-box}
-      body{background:#fff;font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;color:#0f172a}
-      .navbar{position:fixed;top:0;left:0;width:100%;padding:30px 0;z-index:1000;transition:all .6s cubic-bezier(.16,1,.3,1)}
-      .navbar .container{display:flex;justify-content:space-between;align-items:center}
-      .container{max-width:1200px;margin:0 auto;padding:0 40px}
-      .logo{font-size:24px;font-weight:800;text-decoration:none;color:#0f172a;letter-spacing:-1px;font-family:'Plus Jakarta Sans',sans-serif}
-      .logo span{color:#26D367}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            background: #fff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+            color: #0f172a
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 0;
+            z-index: 1000;
+            transition: all .6s cubic-bezier(.16, 1, .3, 1)
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            text-decoration: none;
+            color: #0f172a;
+            letter-spacing: -1px;
+            font-family: 'Plus Jakarta Sans', sans-serif
+        }
+
+        .logo span {
+            color: #26D367
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet"></noscript>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+            rel="stylesheet">
+    </noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="services.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
@@ -43,8 +93,7 @@
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-dropdown">
-                    <a href="index.html#services" class="nav-link">Services <i
-                            class="fas fa-chevron-down nav-dd-arrow"></i></a>
+                    <a href="#services" class="nav-link">Services <i class="fas fa-chevron-down nav-dd-arrow"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="content-strategy.html"><i class="fas fa-pen-nib"></i> Content Strategy &
                                 Scripts</a></li>
@@ -53,7 +102,7 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="index.html#work" class="nav-link">Our Work</a></li>
+                <li><a href="#portfolio" class="nav-link">Our Work</a></li>
                 <li><a href="contact.html" class="nav-link">Contact Us</a></li>
             </ul>
             <div class="menu-toggle" id="mobile-menu">
@@ -138,9 +187,10 @@
             <div class="container">
                 <div class="np-header">
                     <div class="np-header-left">
-                        <span class="np-badge">Our Work</span>
-                        <h2 class="np-title">Content That Converts</h2>
-                        <p class="np-desc">Our tailored solutions empower your online presence, ensuring growth and success in the digital landscape.</p>
+                        <span class="sub-title">Our Work</span>
+                        <h2 class="np-title">Content That <span class="highlight">Converts</span></h2>
+                        <p class="np-desc">Our tailored solutions empower your online presence, ensuring growth and
+                            success in the digital landscape.</p>
                     </div>
                 </div>
             </div>
@@ -150,30 +200,34 @@
                     <div class="np-track">
                         <!-- Card 1 -->
                         <div class="np-card fade-up">
-                            <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?w=800&q=80&fm=webp" alt="Campaign Strategy" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?w=800&q=80&fm=webp"
+                                alt="Campaign Strategy" loading="lazy">
                             <div class="np-card-btn-wrap">
-                                <button class="np-btn-icon"><i class="fas fa-arrow-up-right"></i></button>
+                                <button class="np-btn-icon"><i class="fas fa-arrow-right"></i></button>
                             </div>
                         </div>
                         <!-- Card 2 -->
                         <div class="np-card fade-up" style="transition-delay: 0.1s;">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&fm=webp" alt="Data Content" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&fm=webp"
+                                alt="Data Content" loading="lazy">
                             <div class="np-card-btn-wrap">
-                                <button class="np-btn-icon"><i class="fas fa-arrow-up-right"></i></button>
+                                <button class="np-btn-icon"><i class="fas fa-arrow-right"></i></button>
                             </div>
                         </div>
                         <!-- Card 3 -->
                         <div class="np-card fade-up" style="transition-delay: 0.2s;">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&fm=webp" alt="Analytics" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&fm=webp"
+                                alt="Analytics" loading="lazy">
                             <div class="np-card-btn-wrap">
-                                <button class="np-btn-icon"><i class="fas fa-arrow-up-right"></i></button>
+                                <button class="np-btn-icon"><i class="fas fa-arrow-right"></i></button>
                             </div>
                         </div>
                         <!-- Card 4 -->
                         <div class="np-card fade-up" style="transition-delay: 0.3s;">
-                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&q=80&fm=webp" alt="Brand Content" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&q=80&fm=webp"
+                                alt="Brand Content" loading="lazy">
                             <div class="np-card-btn-wrap">
-                                <button class="np-btn-icon"><i class="fas fa-arrow-up-right"></i></button>
+                                <button class="np-btn-icon"><i class="fas fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -185,36 +239,40 @@
                     <div class="np-track">
                         <!-- Card 3 -->
                         <div class="np-card fade-up">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&fm=webp" alt="Analytics" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&fm=webp"
+                                alt="Analytics" loading="lazy">
                             <div class="np-card-btn-wrap">
-                                <button class="np-btn-icon"><i class="fas fa-arrow-up-right"></i></button>
+                                <button class="np-btn-icon"><i class="fas fa-arrow-right"></i></button>
                             </div>
                         </div>
                         <!-- Card 4 -->
                         <div class="np-card fade-up" style="transition-delay: 0.1s;">
-                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&q=80&fm=webp" alt="Brand Content" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&q=80&fm=webp"
+                                alt="Brand Content" loading="lazy">
                             <div class="np-card-btn-wrap">
-                                <button class="np-btn-icon"><i class="fas fa-arrow-up-right"></i></button>
+                                <button class="np-btn-icon"><i class="fas fa-arrow-right"></i></button>
                             </div>
                         </div>
                         <!-- Card 1 -->
                         <div class="np-card fade-up" style="transition-delay: 0.2s;">
-                            <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?w=800&q=80&fm=webp" alt="Campaign Strategy" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?w=800&q=80&fm=webp"
+                                alt="Campaign Strategy" loading="lazy">
                             <div class="np-card-btn-wrap">
-                                <button class="np-btn-icon"><i class="fas fa-arrow-up-right"></i></button>
+                                <button class="np-btn-icon"><i class="fas fa-arrow-right"></i></button>
                             </div>
                         </div>
                         <!-- Card 2 -->
                         <div class="np-card fade-up" style="transition-delay: 0.3s;">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&fm=webp" alt="Data Content" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&fm=webp"
+                                alt="Data Content" loading="lazy">
                             <div class="np-card-btn-wrap">
-                                <button class="np-btn-icon"><i class="fas fa-arrow-up-right"></i></button>
+                                <button class="np-btn-icon"><i class="fas fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Lightbox Container -->
             <div class="np-lightbox">
                 <button class="np-lightbox-close"><i class="fas fa-times"></i></button>
@@ -223,10 +281,10 @@
         </section>
 
         <!-- Services Overview (Stacked Full-Screen Cards) -->
-        <section class="services-stack-section">
+        <section class="services-stack-section" id="services">
             <div class="container" style="padding-top: 30px; padding-bottom: 20px;">
                 <span class="sub-title">What We Offer</span>
-                <h2 style="font-size: 48px; font-weight: 800; line-height: 1.2;">Our Content <span
+                <h2 style="font-size: 38px; font-weight: 700; line-height: 1.2;">Our Content <span
                         class="highlight">Services</span></h2>
             </div>
             <div class="stack-container">
@@ -503,8 +561,8 @@
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#services">Services</a></li>
-                        <li><a href="index.html#work">Work</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#work">Work</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
