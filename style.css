@@ -334,8 +334,8 @@ h3,
 }
 
 .hero-new-layout h1 {
-    font-size: clamp(48px, 12vw, 130px);
-    /* Slightly smaller for compactness */
+    font-size: clamp(40px, 10.8vw, 115px);
+    /* Slightly smaller for compactness and long words */
     font-weight: 800;
     line-height: 0.9;
     margin: 0;
@@ -359,8 +359,8 @@ h3,
 }
 
 .top-row h1 span.dot:first-of-type {
-    margin-right: 40px;
-    /* Gap between DEFINE. and DESIGN */
+    margin-right: 20px;
+    /* Reduced gap to fit larger words on one row */
 }
 
 .dot {
@@ -417,7 +417,7 @@ h3,
 
 @media (max-width: 992px) {
     .hero-new-layout h1 {
-        font-size: 60px;
+        font-size: 55px;
     }
 
     .middle-row {
@@ -491,8 +491,8 @@ h3,
 
     /* Words — big, tight letter-spacing, relaxed line-height to spread */
     .hero-new-layout h1 {
-        font-size: 64px;
-        letter-spacing: -3px;
+        font-size: 52px;
+        letter-spacing: -2px;
         line-height: 1.05;
         margin: 0;
         text-align: left;
@@ -514,10 +514,10 @@ h3,
         display: block;
         width: 100%;
         text-align: left;
-        font-size: 64px;
+        font-size: 52px;
         font-weight: 800;
         font-family: 'Plus Jakarta Sans', sans-serif;
-        letter-spacing: -3px;
+        letter-spacing: -2px;
         line-height: 1.0;
     }
 
@@ -1733,7 +1733,7 @@ h2 {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    z-index: 10;
+    z-index: 20;
 }
 
 .avatar-item {
@@ -1985,16 +1985,50 @@ h2 {
         gap: 20px;
     }
 
+    .floating-avatar-area {
+        height: 180px; /* Shorter arc for mobile */
+    }
+
+    .avatar-item {
+        border-width: 3px;
+    }
+
+    /* Shrink all avatars proportionally on mobile */
+    .av-pos-1 { top: 20%; left: 5%; width: 40px; height: 40px; }
+    .av-pos-2 { top: 60%; left: -2%; width: 50px; height: 50px; }
+    .av-pos-3 { top: 5%; left: 50%; transform: translateX(-50%); width: 70px; height: 70px; }
+    .av-pos-4 { top: 15%; right: 5%; width: 45px; height: 45px; }
+    .av-pos-5 { top: 55%; right: -2%; width: 55px; height: 55px; }
+    .av-pos-6 { top: 40%; left: 25%; width: 40px; height: 40px; }
+    .av-pos-7 { top: 45%; right: 25%; width: 40px; height: 40px; }
+    
+    .testi-display-wrapper {
+        margin-top: -30px; /* Pull card closer since arc is smaller */
+    }
+
     .testi-card-container {
-        padding: 60px 20px 40px;
+        padding: 50px 10px 30px;
     }
 
     .testi-card {
-        padding: 70px 25px 35px;
+        padding: 60px 20px 30px;
     }
 
-    .floating-avatars {
-        display: none;
+    .client-name {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .client-quote {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .testi-card-avatar {
+        width: 80px;
+        height: 80px;
+        top: -40px;
+        border-width: 5px;
     }
 
     .testi-subtext {
@@ -2407,5 +2441,250 @@ h2 {
 
     .marquee-track {
         animation: none !important;
+    }
+}
+
+/* =========================================
+   NEW PORTFOLIO DESIGN (Global shared)
+   ========================================= */
+.np-section {
+    padding: 80px 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.np-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+    gap: 30px;
+}
+
+.np-header-left {
+    max-width: 600px;
+    text-align: left;
+}
+
+.np-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.np-title {
+    font-size: clamp(32px, 4vw, 42px);
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #111;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.np-desc {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.np-header-right {
+    flex-shrink: 0;
+}
+
+.np-btn {
+    background: #111;
+    color: #fff;
+    padding: 16px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.np-btn i {
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.np-btn:hover {
+    background: #26d367;
+}
+
+.np-btn:hover i {
+    transform: translate(3px, -3px);
+}
+
+/* Slider Track */
+.np-slider-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.np-slider {
+    overflow: hidden;
+    padding: 20px 0 40px;
+}
+
+.np-track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.np-card {
+    flex: 0 0 clamp(320px, 30vw, 400px);
+    position: relative;
+    border-radius: 32px;
+}
+
+.np-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 32px;
+    display: block;
+    transition: 0.4s ease;
+}
+
+.np-card:hover img {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* Cutout Button Wrapper */
+.np-card-btn-wrap {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    border-bottom-right-radius: 33px;
+    border-top-left-radius: 32px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 12px;
+    z-index: 2;
+}
+
+.np-card-btn-wrap::before {
+    content: '';
+    position: absolute;
+    top: -24px;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border-bottom-right-radius: 24px;
+    box-shadow: 12px 12px 0 0 #fff;
+    pointer-events: none;
+}
+
+.np-card-btn-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -24px;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border-bottom-right-radius: 24px;
+    box-shadow: 12px 12px 0 0 #fff;
+    pointer-events: none;
+}
+
+/* Expand Button */
+.np-btn-icon {
+    width: 60px;
+    height: 60px;
+    background: #111;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.np-card:hover .np-btn-icon {
+    background: #26d367;
+    transform: translate(2px, -2px) scale(1.05);
+}
+
+/* Lightbox Fullscreen */
+.np-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.92);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.np-lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.np-lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 12px;
+    transform: scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.np-lightbox.active img {
+    transform: scale(1);
+}
+
+.np-lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: 0.3s;
+}
+
+.np-lightbox-close:hover {
+    color: #26d367;
+    transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+    .np-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .np-card {
+        flex: 0 0 clamp(280px, 85vw, 350px);
+        min-width: unset;
     }
 }

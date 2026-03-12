@@ -324,101 +324,88 @@ document.addEventListener('mousemove', (e) => {
         });
     }
 });
-// Portfolio Slider Logic
-function initWorkSlider() {
-    const track = document.querySelector('.work-track');
-    const items = document.querySelectorAll('.work-item');
-    const nextBtn = document.querySelector('.work-nav.next');
-    const prevBtn = document.querySelector('.work-nav.prev');
-    const sliderWrapper = document.querySelector('.work-slider-wrapper');
+// New Portfolio Slider & Lightbox Logic
+function initNewPortfolioSlider() {
+    const tracks = document.querySelectorAll('.np-track');
+    const lightbox = document.querySelector('.np-lightbox');
+    const lightboxImg = lightbox ? lightbox.querySelector('img') : null;
+    const lightboxClose = document.querySelector('.np-lightbox-close');
 
-    if (!track || items.length === 0) return;
+    if (tracks.length === 0) return;
 
-    let index = 0;
-    let autoPlayInterval;
-    const gap = 20;
+    // 1) Constant Infinite Scroll (Marquee style) for EACH track
+    tracks.forEach((track, index) => {
+        const cards = track.querySelectorAll('.np-card');
+        if (cards.length === 0) return;
 
-    function getVisibleCount() {
-        if (window.innerWidth > 992) return 3;
-        if (window.innerWidth > 640) return 2;
-        return 1;
-    }
+        let scrollPos = 0;
+        // Optional: invert speed for every second track if desired, but here we just keep them sliding the same way
+        let speed = 0.5;
+        let isHovering = false;
+        let reqId;
 
-    function getWidths() {
-        const firstItem = items[0];
-        const itemWidth = firstItem ? firstItem.offsetWidth + gap : 0;
-        const maxIndex = items.length - getVisibleCount();
-        return { itemWidth, maxIndex: Math.max(0, maxIndex) };
-    }
-
-    function updateSlider() {
-        const { itemWidth, maxIndex } = getWidths();
-        if (index > maxIndex) index = maxIndex;
-        if (index < 0) index = 0;
-
-        gsap.to(track, {
-            x: -index * itemWidth,
-            duration: 0.2,
-            ease: "power4.out"
+        // Clone cards for seamless loop
+        cards.forEach(card => {
+            const clone = card.cloneNode(true);
+            track.appendChild(clone);
         });
 
-        if (prevBtn) prevBtn.style.opacity = index === 0 ? "0.3" : "1";
-        if (nextBtn) nextBtn.style.opacity = index >= maxIndex ? "0.3" : "1";
-    }
-
-    function startAutoPlay() {
-        stopAutoPlay();
-        autoPlayInterval = setInterval(() => {
-            const { maxIndex } = getWidths();
-            if (index < maxIndex) {
-                index++;
-            } else {
-                index = 0;
+        // Simple transform scrolling
+        const startScroll = () => {
+            if (!isHovering) {
+                scrollPos -= speed;
+                // If we scroll exactly half the total track length, reset to 0
+                if (Math.abs(scrollPos) >= track.scrollWidth / 2) {
+                    scrollPos = 0;
+                }
+                gsap.set(track, { x: scrollPos });
             }
-            updateSlider();
-        }, 4000);
-    }
+            reqId = requestAnimationFrame(startScroll);
+        };
 
-    function stopAutoPlay() {
-        if (autoPlayInterval) clearInterval(autoPlayInterval);
-    }
+        startScroll();
 
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-            stopAutoPlay();
-            const { maxIndex } = getWidths();
-            index = (index < maxIndex) ? index + 1 : 0;
-            updateSlider();
-            startAutoPlay();
+        // Pause on hover
+        track.addEventListener('mouseenter', () => isHovering = true);
+        track.addEventListener('mouseleave', () => isHovering = false);
+    });
+
+    // 2) Lightbox Interaction (Global)
+    const allCards = document.querySelectorAll('.np-card'); // include clones
+    allCards.forEach(card => {
+        const btn = card.querySelector('.np-btn-icon');
+        const img = card.querySelector('img');
+        
+        if (btn && img && lightbox) {
+            btn.addEventListener('click', () => {
+                // Pause all animations implicitly since we just show the lightbox overlay
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+                // Prevent background scrolling
+                document.body.style.overflow = 'hidden';
+            });
+        }
+    });
+
+    if (lightboxClose && lightbox) {
+        const closeLightbox = () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        
+        // Close on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
         });
     }
-
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-            stopAutoPlay();
-            const { maxIndex } = getWidths();
-            index = (index > 0) ? index - 1 : maxIndex;
-            updateSlider();
-            startAutoPlay();
-        });
-    }
-
-    if (sliderWrapper) {
-        sliderWrapper.addEventListener('mouseenter', stopAutoPlay);
-        sliderWrapper.addEventListener('mouseleave', startAutoPlay);
-    }
-
-    // Small delay to ensure browser layout is stable
-    setTimeout(() => {
-        updateSlider();
-        startAutoPlay();
-    }, 500);
-
-    window.addEventListener('resize', updateSlider);
 }
 
 // Ensure high performance initialization
-window.addEventListener('load', initWorkSlider);
+window.addEventListener('load', initNewPortfolioSlider);
 
 // ── Floating WhatsApp Button (injected on every page) ──
 (function () {
