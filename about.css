@@ -572,8 +572,9 @@
 
 .about-gallery-slider-wrapper {
     position: relative;
-    max-width: 100%;
-    padding: 0 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
 .about-gallery-slider {
@@ -1145,5 +1146,28 @@
         width: 100%;
         max-width: 280px;
         justify-content: center;
+    }
+}
+
+/* ============================================
+   ABOUT PAGE PERFORMANCE OPTIMISATIONS
+   ============================================ */
+.about-video-container,
+.about-gallery-track,
+.team-card,
+.mvv-card,
+.about-svc-card {
+    will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-video-container,
+    .about-gallery-track,
+    .team-card:hover .team-img img,
+    .mvv-card:hover,
+    .team-card:hover {
+        transition: none !important;
+        transform: none !important;
+        animation: none !important;
     }
 }

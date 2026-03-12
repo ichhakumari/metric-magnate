@@ -743,3 +743,18 @@
         padding: 0 22px 18px;
     }
 }
+
+/* ============================================
+   CONTACT PAGE PERFORMANCE OPTIMISATIONS
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    .hero-blob,
+    .glow-orb,
+    .rotating-ring,
+    .geo-shape,
+    .faq-deco-mark,
+    .hero-grid-overlay {
+        animation: none !important;
+        transition: none !important;
+    }
+}

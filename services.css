@@ -338,6 +338,10 @@
     position: relative;
     overflow: hidden;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
 }
 
 .svc-portfolio-track {
@@ -1005,5 +1009,30 @@
     .svc-faq-grid,
     .svc-testimonials-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   SERVICE PAGE PERFORMANCE OPTIMISATIONS
+   ============================================ */
+.svc-portfolio-track,
+.svc-about-video,
+.svc-overview-card,
+.svc-testi-card {
+    will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .svc-portfolio-track {
+        animation: none !important;
+    }
+
+    .scroll-icon {
+        animation: none !important;
+    }
+
+    .svc-overview-card,
+    .svc-testi-card {
+        transition: none !important;
     }
 }

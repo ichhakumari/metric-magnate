@@ -348,6 +348,7 @@ h3,
 .word-left,
 .word-right {
     display: inline;
+    white-space: nowrap;
 }
 
 .top-row {
@@ -1566,8 +1567,9 @@ h2 {
 
 .work-slider-wrapper {
     position: relative;
-    max-width: 100%;
-    padding: 0 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
 .work-slider {
@@ -2361,5 +2363,49 @@ h2 {
     100% {
         transform: scale(1.6);
         opacity: 0;
+    }
+}
+
+/* ============================================
+   PERFORMANCE OPTIMISATIONS
+   ============================================ */
+
+/* GPU-accelerate elements that will animate */
+.hero,
+.hero-content,
+.hero-headline,
+.floating-icon,
+.work-track,
+.marquee-track,
+.custom-cursor,
+.cursor-follower {
+    will-change: transform;
+}
+
+/* Hide custom cursor on touch / mobile devices */
+@media (hover: none), (pointer: coarse) {
+    .custom-cursor,
+    .cursor-follower {
+        display: none !important;
+    }
+}
+
+/* Respect user's motion preference — disable heavy animations */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .floating-icon {
+        animation: none !important;
+    }
+
+    .marquee-track {
+        animation: none !important;
     }
 }
