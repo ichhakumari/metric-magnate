@@ -190,44 +190,74 @@
     </nav>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-new-layout">
-                    <div class="top-row">
-                        <h1 class="reveal-text">
-                            <span class="word-left">INSPECT<span class="dot pink"></span></span><span
-                                class="word-right"> INNOVATE<span class="dot yellow"></span></span>
-                        </h1>
-                    </div>
+        <!-- Hero / Mission Stack Container -->
+        <section class="services-stack-section" style="padding: 0; background: #f2f2f2;">
+            <div class="stack-container">
+                <div class="stack-cards">
+                    
+                    <!-- Card 1: Hero Section (Converted to Stack Card) -->
+                    <div class="service-stack-card" style="position: relative; height: 100vh; background: #f2f2f2; width: 100%;">
+                        <div style="width: 100%;">
+                            <section id="home" class="hero" style="min-height: 100vh; padding-top: 120px; padding-bottom: 40px; background: transparent; display: flex; align-items: center; justify-content: center;">
+                                <div class="container" style="width: 100%;">
+                                    <div class="hero-new-layout">
+                                        <div class="top-row">
+                                            <h1 class="reveal-text">
+                                                <span class="word-left">INSPECT<span class="dot pink"></span></span><span
+                                                    class="word-right"> INNOVATE<span class="dot yellow"></span></span>
+                                            </h1>
+                                        </div>
 
-                    <div class="middle-row">
-                        <div class="hero-desc fade-up">
-                            <p>Metric Magnate® is the best digital marketing agency in India that excels in launching,
-                                growing, and reinventing brands and startups.</p>
+                                        <div class="middle-row">
+                                            <div class="hero-desc fade-up">
+                                                <p>Metric Magnate® is the best digital marketing agency in India that excels in launching,
+                                                    growing, and reinventing brands and startups.</p>
+                                            </div>
+                                            <h1 class="reveal-text">INTEGRATE<span class="dot teal"></span></h1>
+                                        </div>
+
+                                        <div class="bottom-row">
+                                            <h1 class="reveal-text">IMPACT<span class="dot orange"></span></h1>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Floating Decorative Icons -->
+                                <div class="hero-floats">
+                                    <span class="float-icon fi-1">&#x2731;</span>
+                                    <span class="float-icon fi-2">&#x2731;</span>
+                                    <span class="float-icon fi-3">&#x2B22;</span>
+                                    <span class="float-icon fi-4">+</span>
+                                    <span class="float-icon fi-5">&#x25CF;</span>
+                                    <span class="float-icon fi-6">&#x2731;</span>
+                                    <span class="float-icon fi-7">&#x25B2;</span>
+                                </div>
+                            </section>
                         </div>
-                        <h1 class="reveal-text">INTEGRATE<span class="dot teal"></span></h1>
                     </div>
-
-                    <div class="bottom-row">
-                        <h1 class="reveal-text">IMPACT<span class="dot orange"></span></h1>
+                    
+                    <!-- Card 3: Core Text (Metric Magnate Dark Blue) -->
+                    <style>
+                        @keyframes slow-float {
+                            0% { transform: translateY(0px); }
+                            50% { transform: translateY(-15px); }
+                            100% { transform: translateY(0px); }
+                        }
+                        .mission-float-text {
+                            animation: slow-float 6s ease-in-out infinite;
+                            will-change: transform;
+                        }
+                    </style>
+                    <div class="service-stack-card card-2" style="position: relative; height: 100vh; background: #0f172a; color: #fff;">
+                        <div class="stack-card-inner" style="display: flex; align-items: center; justify-content: center; text-align: center; grid-template-columns: 1fr; padding: 0 20px;">
+                            <div class="stack-content mission-float-text" style="max-width: 800px; margin: 0 auto;">
+                                <h2 class="card-title" style="font-size: clamp(20px, 2.5vw, 36px); line-height: 1.7; text-transform: none; letter-spacing: 0.5px; font-weight: 400; color: rgba(255,255,255,0.9);">
+                                    The digital landscape is shifting. Customers no longer expect just a product; they expect an experience that resonates. Metric Magnate was founded on the principle that true digital dominance is built on two pillars: <span class="highlight" style="display: inline; color: #26D367; font-weight: 700;">Surgical Precision</span> and <span class="highlight" style="display: inline; color: #26D367; font-weight: 700;">Creative Courage</span>. We help brands navigate the complexities of the modern market by turning raw data into strategic advantage.
+                                </h2>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- <div class="scroll-indicator">
-                <span>Scroll Down</span>
-                <div class="mouse"></div>
-            </div> -->
-
-            <!-- Floating Decorative Icons -->
-            <div class="hero-floats">
-                <span class="float-icon fi-1">&#x2731;</span>
-                <span class="float-icon fi-2">&#x2731;</span>
-                <span class="float-icon fi-3">&#x2B22;</span>
-                <span class="float-icon fi-4">+</span>
-                <span class="float-icon fi-5">&#x25CF;</span>
-                <span class="float-icon fi-6">&#x2731;</span>
-                <span class="float-icon fi-7">&#x25B2;</span>
             </div>
         </section>
 

@@ -79,35 +79,60 @@ function initAnimations() {
         });
     });
 
-    // Services Stack Animation
-    const stackCards = gsap.utils.toArray(".service-stack-card");
-    stackCards.forEach((card, i) => {
-        if (i !== stackCards.length - 1) {
-            gsap.to(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true,
-                },
-                scale: 0.8,
-                opacity: 0.5,
-                filter: "blur(10px)",
-                ease: "none"
-            });
-        }
+    // Services Stack Animation (Per-Container)
+    const stackContainers = document.querySelectorAll(".stack-cards");
+    stackContainers.forEach(container => {
+        const stackCards = gsap.utils.toArray(container.querySelectorAll(".service-stack-card"));
+        stackCards.forEach((card, i) => {
+            // Animate scale/blur for all cards EXCEPT the last one in this specific stack
+            if (i !== stackCards.length - 1) {
+                gsap.to(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top top",
+                        end: "bottom top",
+                        scrub: true,
+                    },
+                    scale: 0.8,
+                    opacity: 0.5,
+                    filter: "blur(10px)",
+                    ease: "none"
+                });
+            }
 
-        // Content entrance animation
-        gsap.from(card.querySelector(".stack-content"), {
-            scrollTrigger: {
-                trigger: card,
-                start: "top 60%",
-            },
-            y: 100,
-            opacity: 0,
-            duration: 1.2,
-            ease: "power4.out"
+            // Content entrance animation
+            const content = card.querySelector(".stack-content");
+            if (content) {
+                gsap.from(content, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 60%",
+                    },
+                    y: 100,
+                    opacity: 0,
+                    duration: 1.2,
+                    ease: "power4.out"
+                });
+            }
         });
+    });
+
+    // Mission Scroll Floating Effect
+    gsap.fromTo(".mission-scroll-wrap", {
+        y: 120,
+        opacity: 0,
+        scale: 0.95
+    }, {
+        scrollTrigger: {
+            trigger: "#mission",
+            start: "top 85%",
+            end: "center 55%",
+            scrub: 1
+        },
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        ease: "power2.out"
     });
 
     // Why Choose Us reveal
@@ -375,7 +400,7 @@ function initNewPortfolioSlider() {
     allCards.forEach(card => {
         const btn = card.querySelector('.np-btn-icon');
         const img = card.querySelector('img');
-        
+
         if (btn && img && lightbox) {
             btn.addEventListener('click', () => {
                 // Pause all animations implicitly since we just show the lightbox overlay
@@ -394,7 +419,7 @@ function initNewPortfolioSlider() {
         };
 
         lightboxClose.addEventListener('click', closeLightbox);
-        
+
         // Close on background click
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
