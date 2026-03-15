@@ -11,15 +11,20 @@ requestAnimationFrame(raf)
 // Preloader Fade Out
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
-    gsap.to(preloader, {
-        opacity: 0,
-        duration: 1,
-        ease: "power2.inOut",
-        onComplete: () => {
-            preloader.style.display = 'none';
-            initAnimations();
-        }
-    });
+    if (preloader) {
+        gsap.to(preloader, {
+            opacity: 0,
+            duration: 1,
+            ease: "power2.inOut",
+            onComplete: () => {
+                preloader.style.display = 'none';
+                initAnimations();
+            }
+        });
+    } else {
+        // If no preloader exists on this page, initialize animations immediately
+        initAnimations();
+    }
 });
 
 // GSAP Animations
